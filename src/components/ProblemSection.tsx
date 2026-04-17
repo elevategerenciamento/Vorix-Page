@@ -34,26 +34,27 @@ const ProblemSection = () => {
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-vorix-orange font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs"
+            className="text-vorix-orange font-black uppercase tracking-[0.4em] text-[10px] md:text-sm"
           >
-            A REALIDADE NEGLECTED
+            O CUSTO DA GESTÃO TRADICIONAL
           </motion.span>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-8xl font-extrabold mt-6 md:mt-8 tracking-tighter leading-[0.9]"
+            className="text-4xl md:text-8xl font-black mt-6 md:mt-10 tracking-tighter leading-[0.9] max-w-5xl mx-auto"
           >
-            Gerir é difícil. <br className="hidden md:block" />
-            <span className="text-white/20">Ver seu tempo sumir é pior.</span>
+            Enquanto você luta contra o caos, <br className="hidden md:block" />
+            <span className="text-white/20 italic">seu lucro escorre pelas mãos.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-white/40 text-lg md:text-2xl mt-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-white/40 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-medium"
           >
-            O método tradicional de gestão está quebrado. Planilhas infinitas e ferramentas complexas não trazem lucro, trazem ansiedade e paralisia.
+            Gerir sem inteligência técnica é como pilotar no escuro. Estes são os sintomas de quem ainda está preso ao passado — o Vorix nasceu para destruir esse ciclo.
           </motion.p>
+
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
