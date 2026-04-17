@@ -19,13 +19,13 @@ const AIShowcase = () => {
           Seu consultor técnico, <span className="text-white/40">na velocidade do agora.</span>
         </h2>
         <p className="text-base md:text-xl text-white/50 mb-8 md:mb-10 leading-relaxed font-medium">
-          A I.A. Vorix não é um chatbot amigável de conversas genéricas. É um motor de inteligência desenhado para encontrar anomalias, sugerir cortes estratégicos e maximizar sua eficiência operacional.
+          A I.A. Vorix não é um chat externo ou um bot genérico. Ela vive <strong>dentro do seu dashboard</strong>, processando cada centavo que entra e sai da sua conta em tempo real. É o seu consultor técnico que nunca dorme, focado em apontar falhas antes que elas aconteçam.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-6 text-left">
           {[
-            { title: "Linguagem Técnica", desc: "Sem emojis, hashtags ou distrações inúteis. Apenas dados.", icon: <Shield size={20} className="text-vorix-orange" /> },
-            { title: "Predição de Riscos", desc: "Detectamos anomalias no seu fluxo antes que virem prejuízo.", icon: <Bot size={20} className="text-vorix-orange" /> },
+            { title: "Análise Integrada", desc: "Diferente de IAs comuns, a Vorix conhece seus números e responde com base neles.", icon: <Brain size={20} className="text-vorix-orange" /> },
+            { title: "Predição de Riscos", desc: "Detectamos anomalias no seu fluxo antes que virem prejuízo.", icon: <Shield size={20} className="text-vorix-orange" /> },
           ].map((item) => (
             <div key={item.title} className="flex flex-col gap-4 p-6 glass-card bg-white/5 border-white/5">
               <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-vorix-orange/10 flex items-center justify-center">
@@ -33,11 +33,12 @@ const AIShowcase = () => {
               </div>
               <div>
                 <h4 className="font-bold text-base">{item.title}</h4>
-                <p className="text-white/40 text-xs leading-tight">{item.desc}</p>
+                <p className="text-white/40 text-[11px] leading-tight">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
+
 
         
         <a 
