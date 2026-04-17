@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AlertCircle, XCircle, Clock, TrendingDown } from 'lucide-react';
+import { AlertCircle, XCircle, Clock, TrendingDown, ArrowRight } from 'lucide-react';
 
 const ProblemSection = () => {
   const problems = [
@@ -24,13 +24,12 @@ const ProblemSection = () => {
       desc: "Interfaces poluídas e ruído visual constantes drenam sua energia antes mesmo de você começar a produzir.",
       icon: <AlertCircle className="text-red-500" />
     }
-
   ];
 
   return (
     <section className="py-24 md:py-32 px-6 bg-vorix-dark/30">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 md:mb-32">
+        <div className="text-center mb-16 md:mb-24">
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -52,26 +51,35 @@ const ProblemSection = () => {
             transition={{ delay: 0.2 }}
             className="text-white/40 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-medium"
           >
-            Gerir sem inteligência técnica é como pilotar no escuro. Estes são os sintomas de quem ainda está preso ao passado — o Vorix nasceu para destruir esse ciclo.
+            Gerir sem inteligência técnica é como pilotar no escuro. Estes são os sintomas de quem ainda está preso ao passado.
           </motion.p>
-
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+        {/* Mobile Swipe Indicator */}
+        <div className="md:hidden flex items-center justify-center gap-2 mb-6 text-white/20 text-[10px] font-black uppercase tracking-widest">
+           <span>Arraste para o lado</span>
+           <ArrowRight size={12} className="animate-pulse" />
+        </div>
+
+        {/* Horizontal Container for Mobile Swiping */}
+        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto md:overflow-visible pb-10 md:pb-0 scrollbar-hide snap-x snap-mandatory px-4 md:px-0 -mx-4 md:mx-0">
           {problems.map((prob, index) => (
             <motion.div
               key={prob.title}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-card p-6 md:p-8 group border-transparent bg-vorix-card/30 hover:bg-vorix-card/60 transition-all cursor-default"
+              className="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-card p-8 md:p-8 group border-transparent bg-vorix-card/30 hover:bg-vorix-card/60 transition-all cursor-default"
             >
-              <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
                 {prob.icon}
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tight">{prob.title}</h3>
-              <p className="text-white/40 text-sm md:text-base leading-relaxed">{prob.desc}</p>
+              <h3 className="text-2xl font-black mb-4 tracking-tight leading-tight uppercase">{prob.title}</h3>
+              <p className="text-white/30 text-base leading-relaxed">{prob.desc}</p>
+              
+              {/* Corner Accent */}
+              <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-red-500/20 group-hover:bg-red-500 transition-colors" />
             </motion.div>
           ))}
         </div>

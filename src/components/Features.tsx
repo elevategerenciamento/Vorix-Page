@@ -1,61 +1,100 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { LayoutDashboard, Wallet, Brain, Trophy, FileText, LineChart } from 'lucide-react';
+import { 
+  BarChart3, 
+  ShieldCheck, 
+  Zap, 
+  Target, 
+  Layers, 
+  Cpu 
+} from 'lucide-react';
 
 const Features = () => {
   const features = [
     {
-      title: "Visão de Águia",
-      desc: "Pare de olhar para o passado. Veja sua operação em tempo real com métricas que realmente movem o ponteiro do seu lucro.",
-      icon: <LayoutDashboard size={24} className="text-vorix-orange" />,
+      title: "Visão Ultra de Águia",
+      desc: "Veja sua operação com claridade cristalina. Nosso motor processa dados e entrega o que realmente importa para expandir seu lucro.",
+      icon: <BarChart3 size={32} />,
+      color: "from-blue-500 to-cyan-400",
+      accent: "bg-blue-500/10 text-blue-400"
     },
     {
-      title: "Estanque o Sangramento",
-      desc: "Nós encontramos onde o seu dinheiro está vazando. Identificamos custos invisíveis e recuperamos sua margem de lucro.",
-      icon: <Wallet size={24} className="text-blue-400" />,
+      title: "IA Preditiva Integrada",
+      desc: "O Vorix antecipa riscos e identifica oportunidades de economia automática que você nem sabia que existiam.",
+      icon: <Cpu size={32} />,
+      color: "from-purple-500 to-pink-500",
+      accent: "bg-purple-500/10 text-purple-400"
     },
     {
-      title: "Direção Técnica",
-      desc: "Nossa I.A. não dá palpites. Ela analisa padrões e sugere ações baseadas em dados concretos, removendo o medo de errar.",
-      icon: <Brain size={24} className="text-purple-400" />,
+      title: "Segurança de Elite",
+      desc: "Seus dados são seu maior ativo. Protegemos cada transação com tecnologia de ponta para sua total paz de espírito.",
+      icon: <ShieldCheck size={32} />,
+      color: "from-emerald-500 to-teal-400",
+      accent: "bg-emerald-500/10 text-emerald-400"
     },
     {
-      title: "Hábito de Vencer",
-      desc: "A gamificação transforma o trabalho duro em progresso visível. Criamos um ciclo de produtividade impossível de ignorar.",
-      icon: <Trophy size={24} className="text-yellow-400" />,
+      title: "Execução Instantânea",
+      desc: "Reduza tarefas manuais em até 90%. O Vorix automatiza o trabalho pesado para você focar apenas na estratégia.",
+      icon: <Zap size={32} />,
+      color: "from-vorix-orange to-amber-500",
+      accent: "bg-orange-500/10 text-vorix-orange"
     },
     {
-      title: "Autoridade em Dados",
-      desc: "Gere relatórios profissionais que falam a língua do dinheiro. Mostre para o mundo o valor real da sua operação.",
-      icon: <FileText size={24} className="text-emerald-400" />,
+      title: "Metas de Alta Precisão",
+      desc: "Pare de perseguir metas genéricas. Defina objetivos técnicos e acompanhe o progresso com fidelidade absoluta.",
+      icon: <Target size={32} />,
+      color: "from-rose-500 to-red-400",
+      accent: "bg-rose-500/10 text-rose-400"
     },
     {
-      title: "Radar Estratégico",
-      desc: "Nunca seja pego de surpresa. Tenha um sistema que monitora o mercado para você, alertando sobre riscos e oportunidades.",
-      icon: <LineChart size={24} className="text-rose-400" />,
-    },
-
+      title: "Ecossistema Modular",
+      desc: "O Vorix se adapta à sua escala. Tudo o que você precisa em uma única engenharia integrada e elegante.",
+      icon: <Layers size={32} />,
+      color: "from-indigo-500 to-blue-500",
+      accent: "bg-indigo-500/10 text-indigo-400"
+    }
   ];
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {features.map((feature, index) => (
         <motion.div
           key={feature.title}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: index * 0.1 }}
-          whileHover={{ y: -5, borderColor: 'rgba(255, 77, 0, 0.2)' }}
-          className="glass-card p-6 md:p-8 group border-transparent bg-vorix-card/30 hover:bg-vorix-card/60 transition-all cursor-default"
+          transition={{ delay: index * 0.1, duration: 0.6 }}
+          whileHover={{ y: -10 }}
+          className="relative group h-full"
         >
-          <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            {feature.icon}
+          {/* Background Highlight on Hover */}
+          <div className={`absolute -inset-1 bg-gradient-to-r ${feature.color} rounded-[2rem] opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`} />
+          
+          <div className="relative h-full bg-[#0A0A0A] border border-white/5 p-10 rounded-[2rem] flex flex-col justify-between overflow-hidden">
+             {/* Gradient Accent Bar */}
+             <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${feature.color} opacity-30 group-hover:opacity-100 transition-opacity`} />
+             
+             <div>
+                <div className={`w-16 h-16 rounded-2xl ${feature.accent} flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-black mb-6 tracking-tight leading-tight uppercase group-hover:text-white transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-white/40 text-lg leading-relaxed group-hover:text-white/60 transition-colors">
+                  {feature.desc}
+                </p>
+             </div>
+
+             <div className="mt-10 flex items-center justify-between">
+                <div className="flex gap-1">
+                   {[1,2,3].map(i => <div key={i} className={`w-1 h-1 rounded-full bg-gradient-to-r ${feature.color} opacity-20`} />)}
+                </div>
+                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white/10 group-hover:text-white/30 transition-colors">
+                   Engenharia Vorix
+                </div>
+             </div>
           </div>
-          <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-          <p className="text-white/50 text-sm leading-relaxed">
-            {feature.desc}
-          </p>
         </motion.div>
       ))}
     </div>

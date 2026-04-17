@@ -104,17 +104,26 @@ function App() {
 
         <ProblemSection />
         
-        <div className="flex justify-center py-6 md:py-10 px-6">
-          <a 
+        <div className="flex justify-center py-10 md:py-20 px-6">
+          <motion.a 
             href="https://vorix-project.vercel.app/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-base md:text-lg px-8 py-4"
+            initial={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="premium-button premium-button-primary w-full sm:w-auto flex flex-col items-center justify-center gap-2 text-xl md:text-3xl px-12 py-8 md:px-20 md:py-10 shadow-[0_0_60px_rgba(255,77,0,0.5)] relative overflow-hidden group"
           >
-             Quero transformar minha gestão agora
-             <ArrowRight size={18} />
-          </a>
+             <div className="absolute inset-0 bg-gradient-to-r from-vorix-orange to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+             <span className="relative z-10 font-black tracking-tight uppercase">Quero transformar minha gestão agora</span>
+             <div className="relative z-10 flex items-center gap-2 text-sm font-bold text-white/60 tracking-[0.3em] uppercase">
+                Ação Imediata <ArrowRight size={16} />
+             </div>
+             {/* Animating Pulse Circle */}
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border-2 border-vorix-orange/50 rounded-full animate-ping scale-150 opacity-0 group-hover:block" />
+          </motion.a>
         </div>
+
 
         <section id="features" className="py-24 px-6 relative">
           <div className="max-w-7xl mx-auto">
