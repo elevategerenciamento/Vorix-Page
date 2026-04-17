@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Instagram } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   const instagramLink = "https://www.instagram.com/br.financeiro/";
@@ -34,8 +34,13 @@ const Footer = () => {
             <div className="flex items-center gap-4 order-1 sm:order-2">
               <span className="text-[10px] font-bold text-white/20 uppercase tracking-widest mr-2">Siga-nos</span>
               <a href={instagramLink} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-vorix-orange hover:border-vorix-orange/50 transition-all hover:scale-110">
-                <Instagram size={18} />
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
               </a>
+
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ import Gamification from './components/Gamification';
 import MarketRadar from './components/MarketRadar';
 import ProblemSection from './components/ProblemSection';
 import Footer from './components/Footer';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Plus, TrendingUp } from 'lucide-react';
 
 function App() {
   const { scrollYProgress } = useScroll();
