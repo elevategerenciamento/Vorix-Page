@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Minus, Plus, Search, Filter, TrendingUp, Newspaper, Lightbulb } from 'lucide-react';
+import { Minus, TrendingUp, Newspaper, Lightbulb } from 'lucide-react';
 
 const DashboardPreview = () => {
   return (
