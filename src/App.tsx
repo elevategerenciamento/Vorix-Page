@@ -10,7 +10,22 @@ import Gamification from './components/Gamification';
 import MarketRadar from './components/MarketRadar';
 import ProblemSection from './components/ProblemSection';
 import Footer from './components/Footer';
-import { ArrowRight, Plus, TrendingUp } from 'lucide-react';
+import { 
+  ArrowRight, 
+  Plus, 
+  TrendingUp, 
+  LayoutDashboard, 
+  ArrowRightLeft, 
+  CreditCard, 
+  Bell, 
+  Radar, 
+  Trophy, 
+  Target, 
+  StickyNote, 
+  Bot, 
+  Star, 
+  FileText 
+} from 'lucide-react';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -56,12 +71,34 @@ function App() {
               Aqui, cada pixel foi desenhado para remover o ruído e focar no que realmente expande sua operação.
             </motion.p>
 
-            {/* Small icon set instead of another full screen */}
-            <div className="flex justify-center gap-8 mt-12 text-white/20">
-              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/5"><Plus size={20} /></div>
-              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/5"><Plus size={20} /></div>
-              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/5"><Plus size={20} /></div>
+            {/* Mini-Feature Showcase */}
+            <div className="mt-16 max-w-3xl mx-auto flex flex-wrap justify-center gap-3 md:gap-4 px-4">
+              {[
+                { name: 'Dashboard', icon: <LayoutDashboard size={14} /> },
+                { name: 'Transações', icon: <ArrowRightLeft size={14} /> },
+                { name: 'Contas', icon: <CreditCard size={14} /> },
+                { name: 'Alertas', icon: <Bell size={14} /> },
+                { name: 'Radar', icon: <Radar size={14} /> },
+                { name: 'Missões', icon: <Trophy size={14} /> },
+                { name: 'Metas', icon: <Target size={14} /> },
+                { name: 'Anotações', icon: <StickyNote size={14} /> },
+                { name: 'IA Vorix', icon: <Bot size={14} /> },
+                { name: 'Assinatura', icon: <Star size={14} /> },
+                { name: 'Relatórios', icon: <FileText size={14} /> },
+              ].map((item) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 77, 0, 0.1)', borderColor: 'rgba(255, 77, 0, 0.3)' }}
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5 text-[10px] md:text-xs font-bold text-white/40 hover:text-white transition-all cursor-default"
+                >
+                  <span className="text-vorix-orange">{item.icon}</span>
+                  <span className="uppercase tracking-widest">{item.name}</span>
+                </motion.div>
+              ))}
             </div>
+
           </div>
         </section>
 
