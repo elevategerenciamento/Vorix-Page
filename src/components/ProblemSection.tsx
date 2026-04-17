@@ -40,7 +40,7 @@ const ProblemSection = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-8xl font-extrabold mt-8 tracking-tighter leading-[0.9]"
+            className="text-3xl md:text-8xl font-extrabold mt-6 md:mt-8 tracking-tighter leading-[0.9]"
           >
             Por que sua gestão <br className="hidden md:block" />
             <span className="text-white/20">está drenando seu tempo?</span>
@@ -55,13 +55,13 @@ const ProblemSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-white/20 transition-all group"
+              className="glass-card p-6 md:p-8 group border-transparent bg-vorix-card/30 hover:bg-vorix-card/60 transition-all cursor-default"
             >
               <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                 {prob.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-4 tracking-tight">{prob.title}</h3>
-              <p className="text-white/40 text-base md:text-lg leading-relaxed">{prob.desc}</p>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tight">{prob.title}</h3>
+              <p className="text-white/40 text-sm md:text-base leading-relaxed">{prob.desc}</p>
             </motion.div>
           ))}
         </div>

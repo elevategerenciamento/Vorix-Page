@@ -46,7 +46,7 @@ const Features = () => {
           viewport={{ once: true }}
           transition={{ delay: index * 0.1 }}
           whileHover={{ y: -5, borderColor: 'rgba(255, 77, 0, 0.2)' }}
-          className="glass-card p-8 group border-transparent bg-vorix-card/30 hover:bg-vorix-card/60 transition-all cursor-default"
+          className="glass-card p-6 md:p-8 group border-transparent bg-vorix-card/30 hover:bg-vorix-card/60 transition-all cursor-default"
         >
           <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
             {feature.icon}

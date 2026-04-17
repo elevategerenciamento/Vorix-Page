@@ -29,7 +29,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.9] mb-10"
+          className="text-4xl xs:text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.9] mb-10"
         >
           Domine sua gestão <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-vorix-orange to-orange-400">
@@ -50,13 +50,13 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-20 px-4"
         >
-          <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-4 text-2xl px-12 py-7 shadow-[0_20px_50px_rgba(255,77,0,0.4)]">
+          <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-lg sm:text-2xl px-8 py-5 sm:px-12 sm:py-7 shadow-[0_20px_50px_rgba(255,77,0,0.4)]">
             Acessar o App Agora
-            <ArrowRight size={28} />
+            <ArrowRight size={22} className="sm:w-[28px] sm:h-[28px]" />
           </button>
-          <button className="premium-button premium-button-secondary w-full sm:w-auto text-2xl px-12 py-7">
+          <button className="premium-button premium-button-secondary w-full sm:w-auto text-lg sm:text-2xl px-8 py-5 sm:px-12 sm:py-7">
             Como funciona?
           </button>
         </motion.div>
@@ -66,10 +66,10 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.95, y: 40 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-20 relative group max-w-6xl mx-auto"
+          className="mt-12 md:mt-20 relative group max-w-6xl mx-auto"
         >
-          <div className="absolute -inset-1 bg-gradient-to-r from-vorix-orange/30 to-blue-500/20 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200" />
-          <div className="relative glass-card p-1 md:p-2 overflow-hidden bg-white/5 border-white/10">
+          <div className="absolute -inset-1 bg-gradient-to-r from-vorix-orange/30 to-blue-500/20 rounded-[1.5rem] md:rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000" />
+          <div className="relative glass-card p-1 md:p-2 overflow-hidden bg-white/5 border-white/10 scale-[0.85] sm:scale-100 origin-top">
              <RealDashboardPreview />
           </div>
         </motion.div>

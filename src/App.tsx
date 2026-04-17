@@ -35,10 +35,10 @@ function App() {
         <Stats />
         <ProblemSection />
         
-        <div className="flex justify-center py-10">
-          <button className="premium-button premium-button-primary flex items-center gap-3 text-lg px-8 py-4">
+        <div className="flex justify-center py-6 md:py-10 px-6">
+          <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-base md:text-lg px-8 py-4">
              Quero transformar minha gestão agora
-             <ArrowRight size={20} />
+             <ArrowRight size={18} />
           </button>
         </div>
 
@@ -49,7 +49,7 @@ function App() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-vorix-orange font-medium tracking-wider uppercase text-sm"
+                className="text-vorix-orange font-bold tracking-widest uppercase text-[10px] md:text-sm"
               >
                 Ecossistema Vorix
               </motion.span>
@@ -58,7 +58,7 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl md:text-5xl font-bold mt-4"
+                className="text-3xl md:text-5xl font-bold mt-4"
               >
                 Tudo o que você precisa em <span className="text-white/60">um só lugar</span>
               </motion.h2>
@@ -67,8 +67,8 @@ function App() {
             <Features />
           </div>
 
-          <div className="flex justify-center mt-20">
-            <button className="premium-button premium-button-primary flex items-center gap-4 text-xl md:text-2xl px-10 py-6 md:px-16 md:py-8 shadow-[0_30px_60px_rgba(255,77,0,0.3)]">
+          <div className="flex justify-center mt-12 md:mt-20">
+            <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-4 text-lg md:text-2xl px-6 py-4 md:px-16 md:py-8 shadow-[0_30px_60px_rgba(255,77,0,0.3)]">
                Quero clareza na minha gestão
                <ArrowRight size={24} />
             </button>
@@ -105,17 +105,17 @@ function App() {
              whileInView={{ opacity: 1, scale: 1 }}
              className="max-w-4xl mx-auto"
            >
-             <h2 className="text-4xl md:text-7xl font-bold mb-8">
-               Pronto para deixar a <span className="text-white/30">confusão para trás?</span>
-             </h2>
-             <p className="text-xl text-white/50 mb-12">
-               Não perca mais tempo com ferramentas que não entregam resultados. 
-               O Vorix é a evolução que sua operação precisa.
-             </p>
-             <button className="premium-button premium-button-primary flex items-center gap-3 text-2xl px-12 py-6 mx-auto shadow-[0_0_50px_rgba(255,77,0,0.3)]">
-               Entrar no Ecossistema Vorix
-               <ArrowRight size={28} />
-             </button>
+              <h2 className="text-3xl md:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+                Pronto para deixar a <span className="text-white/30">confusão para trás?</span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/50 mb-10 md:mb-12">
+                Não perca mais tempo com ferramentas que não entregam resultados. 
+                O Vorix é a evolução que sua operação precisa.
+              </p>
+              <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-lg md:text-2xl px-6 py-4 md:px-12 md:py-6 mx-auto shadow-[0_0_50px_rgba(255,77,0,0.3)]">
+                Entrar no Ecossistema Vorix
+                <ArrowRight size={24} className="md:w-[28px] md:h-[28px]" />
+              </button>
              <p className="mt-8 text-sm text-white/20 font-bold uppercase tracking-widest">Acesso imediato • Sem cartão de crédito necessário</p>
            </motion.div>
         </section>

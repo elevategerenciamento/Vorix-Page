@@ -15,10 +15,10 @@ const AIShowcase = () => {
           <Brain size={16} />
           VORIX INTELLIGENCE
         </motion.div>
-        <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-[1.1] tracking-tighter">
+        <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tighter">
           A I.A. que não apenas responde, <span className="text-white/40">ela antecipa.</span>
         </h2>
-        <p className="text-lg md:text-xl text-white/50 mb-10 leading-relaxed font-medium">
+        <p className="text-base md:text-xl text-white/50 mb-8 md:mb-10 leading-relaxed font-medium">
           Esqueça respostas amigáveis demais ou cheias de ruído. A Vorix IA utiliza um design minimalista para entregar insights técnicos e profissionais.
         </p>
 
@@ -39,7 +39,7 @@ const AIShowcase = () => {
           ))}
         </div>
         
-        <button className="premium-button premium-button-primary mt-12 w-full lg:w-auto text-lg px-10 py-5">
+        <button className="premium-button premium-button-primary mt-8 md:mt-12 w-full lg:w-auto text-base md:text-lg px-8 py-4 md:px-10 md:py-5">
            Experimentar Inteligência Vorix
         </button>
       </div>
@@ -70,10 +70,10 @@ const AIShowcase = () => {
             <span className="text-[10px] font-bold bg-green-500/10 text-green-500 px-3 py-1 rounded-full uppercase tracking-wider">ECONÔMICO</span>
           </div>
 
-          <div className="p-6 md:p-8 space-y-6 h-[400px] md:h-[500px] overflow-y-auto scrollbar-hide">
+          <div className="p-4 md:p-8 space-y-6 h-[350px] md:h-[500px] overflow-y-auto scrollbar-hide">
             <div className="flex justify-end">
-              <div className="bg-vorix-orange p-5 rounded-3xl rounded-tr-none max-w-[90%] md:max-w-[80%]">
-                <p className="text-sm font-bold">Faça uma análise rápida da minha saúde financeira atual.</p>
+              <div className="bg-vorix-orange p-4 md:p-5 rounded-3xl rounded-tr-none max-w-[95%] md:max-w-[80%]">
+                <p className="text-xs md:text-sm font-bold">Faça uma análise rápida da minha saúde financeira atual.</p>
               </div>
             </div>
 

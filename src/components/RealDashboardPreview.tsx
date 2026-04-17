@@ -37,7 +37,7 @@ const RealDashboardPreview = () => {
   ];
 
   return (
-    <div className="w-full bg-[#050505] rounded-[2rem] border border-white/5 overflow-hidden shadow-2xl flex h-[600px] md:h-[800px] text-left">
+    <div className="w-full bg-[#050505] lg:rounded-[2rem] rounded-2xl border border-white/5 overflow-hidden shadow-2xl flex h-[500px] md:h-[800px] text-left">
       {/* Sidebar */}
       <div className="w-64 border-r border-white/5 p-6 hidden lg:flex flex-col gap-2">
         <div className="flex items-center gap-2 mb-10 px-2">
@@ -82,37 +82,37 @@ const RealDashboardPreview = () => {
         </div>
 
         {/* Dash Content */}
-        <div className="p-6 md:p-8 space-y-8 overflow-y-auto scrollbar-hide">
+        <div className="p-4 md:p-8 space-y-6 md:space-y-8 overflow-y-auto scrollbar-hide">
           <div className="space-y-1">
-            <h1 className="text-3xl font-bold">Dashboard</h1>
-            <p className="text-sm text-white/40">Bem-vindo de volta ao seu centro de comando financeiro.</p>
+            <h1 className="text-2xl md:text-3xl font-bold">Dashboard</h1>
+            <p className="text-xs md:text-sm text-white/40">Bem-vindo de volta ao seu centro de comando financeiro.</p>
           </div>
 
           {/* Cards Grid */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[#0A0A0A] p-8 rounded-[2rem] border border-white/5 relative group">
-              <p className="text-xs text-white/40 font-bold uppercase mb-4">Saldo Total</p>
-              <h3 className="text-3xl font-bold">R$ 6.450,00</h3>
-              <div className="absolute top-8 right-8 w-12 h-12 bg-vorix-orange/10 rounded-2xl flex items-center justify-center text-vorix-orange">
-                <Wallet size={24} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="bg-[#0A0A0A] p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-white/5 relative group">
+              <p className="text-[10px] text-white/40 font-bold uppercase mb-2 md:mb-4">Saldo Total</p>
+              <h3 className="text-2xl md:text-3xl font-bold">R$ 6.450,00</h3>
+              <div className="absolute top-6 right-6 md:top-8 md:right-8 w-10 h-10 md:w-12 md:h-12 bg-vorix-orange/10 rounded-xl md:rounded-2xl flex items-center justify-center text-vorix-orange">
+                <Wallet size={20} className="md:w-[24px] md:h-[24px]" />
               </div>
             </div>
             
-            <div className="bg-[#0A0A0A] p-8 rounded-[2rem] border border-white/5 relative">
-              <p className="text-xs text-white/40 font-bold uppercase mb-4">Entradas (Mês)</p>
-              <h3 className="text-3xl font-bold text-green-500">R$ 83,00</h3>
-              <p className="text-[10px] text-green-500/60 font-bold mt-2">+ 12% vs mês anterior</p>
-              <div className="absolute top-8 right-8 w-12 h-12 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-500">
-                <ArrowUp size={24} />
+            <div className="bg-[#0A0A0A] p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-white/5 relative">
+              <p className="text-[10px] text-white/40 font-bold uppercase mb-2 md:mb-4">Entradas (Mês)</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-green-500">R$ 83,00</h3>
+              <p className="text-[9px] text-green-500/60 font-bold mt-1 md:mt-2">+ 12% vs mês anterior</p>
+              <div className="absolute top-6 right-6 md:top-8 md:right-8 w-10 h-10 md:w-12 md:h-12 bg-green-500/10 rounded-xl md:rounded-2xl flex items-center justify-center text-green-500">
+                <ArrowUp size={20} className="md:w-[24px] md:h-[24px]" />
               </div>
             </div>
 
-            <div className="bg-[#0A0A0A] p-8 rounded-[2rem] border border-white/5 relative">
-              <p className="text-xs text-white/40 font-bold uppercase mb-4">Saídas (Mês)</p>
-              <h3 className="text-3xl font-bold text-red-500">R$ 932,00</h3>
-              <p className="text-[10px] text-red-500/60 font-bold mt-2">- 5% vs mês anterior</p>
-              <div className="absolute top-8 right-8 w-12 h-12 bg-red-500/10 rounded-2xl flex items-center justify-center text-red-500">
-                <ArrowDown size={24} />
+            <div className="bg-[#0A0A0A] p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-white/5 relative">
+              <p className="text-[10px] text-white/40 font-bold uppercase mb-2 md:mb-4">Saídas (Mês)</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-red-500">R$ 932,00</h3>
+              <p className="text-[9px] text-red-500/60 font-bold mt-1 md:mt-2">- 5% vs mês anterior</p>
+              <div className="absolute top-6 right-6 md:top-8 md:right-8 w-10 h-10 md:w-12 md:h-12 bg-red-500/10 rounded-xl md:rounded-2xl flex items-center justify-center text-red-500">
+                <ArrowDown size={20} className="md:w-[24px] md:h-[24px]" />
               </div>
             </div>
           </div>
