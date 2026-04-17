@@ -14,10 +14,15 @@ const Navbar = () => {
         </div>
 
         <div>
-          <button className="premium-button premium-button-primary flex items-center gap-3 text-sm md:text-base !py-2.5 !px-5 md:!px-8">
+          <a 
+            href="https://vorix-project.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="premium-button premium-button-primary flex items-center gap-3 text-sm md:text-base !py-2.5 !px-5 md:!px-8"
+          >
             Acessar App Agora
             <ArrowRight size={18} className="hidden sm:block" />
-          </button>
+          </a>
         </div>
       </div>
     </nav>

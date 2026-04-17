@@ -5,8 +5,8 @@ const DashboardPreview = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-0">
       <div className="text-center mb-16 px-4">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">A ferramenta que seus <span className="text-vorix-orange">concorrentes não querem</span> que você conheça</h2>
-        <p className="text-white/50 md:text-xl">Uma interface desenhada para mobile, onde 95% do seu controle acontece.</p>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4">Onde o controle encontra a <span className="text-vorix-orange">conveniência.</span></h2>
+        <p className="text-white/50 text-base md:text-xl max-w-2xl mx-auto">Desenhado para quem decide rápido. Tenha o controle total da sua operação na palma da mão, com uma interface que economiza seu tempo e sua energia cognitiva.</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -119,9 +119,14 @@ const DashboardPreview = () => {
       </div>
 
       <div className="mt-16 text-center">
-        <button className="premium-button premium-button-primary text-xl px-12 py-5 shadow-[0_20px_40px_rgba(255,77,0,0.3)]">
+        <a 
+          href="https://vorix-project.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="premium-button premium-button-primary text-xl px-12 py-5 shadow-[0_20px_40px_rgba(255,77,0,0.3)] inline-flex items-center justify-center"
+        >
            Quero ter esse controle agora
-        </button>
+        </a>
       </div>
     </div>
   );

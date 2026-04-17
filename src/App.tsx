@@ -33,6 +33,31 @@ function App() {
       <main>
         <Hero />
         <Stats />
+        
+        {/* Why Vorix / Identity Section */}
+        <section className="py-24 px-6 bg-gradient-to-b from-vorix-black to-vorix-dark">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="text-3xl md:text-5xl font-bold mb-8 leading-tight"
+            >
+              Não é apenas um dashboard. <br/>
+              <span className="text-white/30">É a inteligência por trás do seu lucro.</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-base md:text-xl text-white/50 leading-relaxed"
+            >
+              Criamos o Vorix para quem cansou de ferramentas amadoras que apenas listam dados. 
+              Nossa missão é transformar números frios em decisões estratégicas automáticas. 
+              Aqui, cada pixel foi desenhado para remover o ruído e focar no que realmente expande sua operação.
+            </motion.p>
+          </div>
+        </section>
+
         <ProblemSection />
         
         <div className="flex justify-center py-6 md:py-10 px-6">
@@ -51,7 +76,7 @@ function App() {
                 viewport={{ once: true }}
                 className="text-vorix-orange font-bold tracking-widest uppercase text-[10px] md:text-sm"
               >
-                Ecossistema Vorix
+                Ecossistema de Soluções
               </motion.span>
               <motion.h2 
                 initial={{ opacity: 0, y: 10 }}
@@ -60,7 +85,7 @@ function App() {
                 transition={{ delay: 0.1 }}
                 className="text-3xl md:text-5xl font-bold mt-4"
               >
-                Tudo o que você precisa em <span className="text-white/60">um só lugar</span>
+                Engenharia de <span className="text-white/60">Alta Performance</span>
               </motion.h2>
             </div>
             
@@ -68,10 +93,15 @@ function App() {
           </div>
 
           <div className="flex justify-center mt-12 md:mt-20">
-            <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-4 text-lg md:text-2xl px-6 py-4 md:px-16 md:py-8 shadow-[0_30px_60px_rgba(255,77,0,0.3)]">
+            <a 
+              href="https://vorix-project.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-4 text-lg md:text-2xl px-6 py-4 md:px-16 md:py-8 shadow-[0_30px_60px_rgba(255,77,0,0.3)]"
+            >
                Quero clareza na minha gestão
                <ArrowRight size={24} />
-            </button>
+            </a>
           </div>
         </section>
 
@@ -112,10 +142,15 @@ function App() {
                 Não perca mais tempo com ferramentas que não entregam resultados. 
                 O Vorix é a evolução que sua operação precisa.
               </p>
-              <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-lg md:text-2xl px-6 py-4 md:px-12 md:py-6 mx-auto shadow-[0_0_50px_rgba(255,77,0,0.3)]">
+              <a 
+                href="https://vorix-project.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-lg md:text-2xl px-6 py-4 md:px-12 md:py-6 mx-auto shadow-[0_0_50px_rgba(255,77,0,0.3)]"
+              >
                 Entrar no Ecossistema Vorix
                 <ArrowRight size={24} className="md:w-[28px] md:h-[28px]" />
-              </button>
+              </a>
              <p className="mt-8 text-sm text-white/20 font-bold uppercase tracking-widest">Acesso imediato • Sem cartão de crédito necessário</p>
            </motion.div>
         </section>

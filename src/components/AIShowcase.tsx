@@ -16,32 +16,38 @@ const AIShowcase = () => {
           VORIX INTELLIGENCE
         </motion.div>
         <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tighter">
-          A I.A. que não apenas responde, <span className="text-white/40">ela antecipa.</span>
+          Seu consultor técnico, <span className="text-white/40">na velocidade do agora.</span>
         </h2>
         <p className="text-base md:text-xl text-white/50 mb-8 md:mb-10 leading-relaxed font-medium">
-          Esqueça respostas amigáveis demais ou cheias de ruído. A Vorix IA utiliza um design minimalista para entregar insights técnicos e profissionais.
+          A I.A. Vorix não é um chatbot amigável de conversas genéricas. É um motor de inteligência desenhado para encontrar anomalias, sugerir cortes estratégicos e maximizar sua eficiência operacional.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-8 text-left">
+        <div className="grid sm:grid-cols-2 gap-6 text-left">
           {[
-            { title: "Zero Ruído", desc: "Sem emojis, hashtags ou distrações visuais.", icon: <Shield size={20} className="text-vorix-orange" /> },
-            { title: "Alertas Proativos", desc: "Detecta anomalias e sugere ações imediatas.", icon: <Bot size={20} className="text-vorix-orange" /> },
+            { title: "Linguagem Técnica", desc: "Sem emojis, hashtags ou distrações inúteis. Apenas dados.", icon: <Shield size={20} className="text-vorix-orange" /> },
+            { title: "Predição de Riscos", desc: "Detectamos anomalias no seu fluxo antes que virem prejuízo.", icon: <Bot size={20} className="text-vorix-orange" /> },
           ].map((item) => (
-            <div key={item.title} className="flex gap-4 p-6 glass-card bg-white/5 border-white/5">
+            <div key={item.title} className="flex flex-col gap-4 p-6 glass-card bg-white/5 border-white/5">
               <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-vorix-orange/10 flex items-center justify-center">
                 {item.icon}
               </div>
               <div>
-                <h4 className="font-bold text-lg">{item.title}</h4>
-                <p className="text-white/40 text-sm leading-tight">{item.desc}</p>
+                <h4 className="font-bold text-base">{item.title}</h4>
+                <p className="text-white/40 text-xs leading-tight">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
+
         
-        <button className="premium-button premium-button-primary mt-8 md:mt-12 w-full lg:w-auto text-base md:text-lg px-8 py-4 md:px-10 md:py-5">
+        <a 
+          href="https://vorix-project.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="premium-button premium-button-primary mt-8 md:mt-12 w-full lg:w-auto text-base md:text-lg px-8 py-4 md:px-10 md:py-5 flex items-center justify-center"
+        >
            Experimentar Inteligência Vorix
-        </button>
+        </a>
       </div>
 
       <div className="relative mt-12 lg:mt-0">

@@ -5,25 +5,26 @@ import { AlertCircle, XCircle, Clock, TrendingDown } from 'lucide-react';
 const ProblemSection = () => {
   const problems = [
     {
-      title: "Decisões no Escuro",
-      desc: "Sem dados claros, você toma decisões baseadas em 'achismos', perdendo dinheiro sem perceber.",
+      title: "O Labirinto dos Dados",
+      desc: "Você se sente perdido em um mar de informações que não levam a lugar nenhum. Falta clareza para decidir.",
       icon: <XCircle className="text-red-500" />
     },
     {
-      title: "Relatórios Lentos",
-      desc: "Perder um dia inteiro para gerar um relatório de performance é coisa do passado.",
+      title: "A Escravidão da Rotina",
+      desc: "Sua operação deveria trabalhar para você, mas você gasta 80% do dia apenas organizando o caos.",
       icon: <Clock className="text-red-500" />
     },
     {
-      title: "Carga Cognitiva Alta",
-      desc: "Você passa horas tentando entender planilhas que deveriam te ajudar, mas só geram mais confusão.",
+      title: "O Custo do Achismo",
+      desc: "Sem direção técnica, cada decisão é uma aposta. E no mercado moderno, apostas custam caro.",
       icon: <TrendingDown className="text-red-500" />
     },
     {
-      title: "Ruído Visual",
-      desc: "Interfaces poluídas que te distraem do que realmente importa: o lucro da sua operação.",
+      title: "Exaustão Mental",
+      desc: "Interfaces poluídas e ruído visual constantes drenam sua energia antes mesmo de você começar a produzir.",
       icon: <AlertCircle className="text-red-500" />
     }
+
   ];
 
   return (
@@ -42,9 +43,17 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-8xl font-extrabold mt-6 md:mt-8 tracking-tighter leading-[0.9]"
           >
-            Por que sua gestão <br className="hidden md:block" />
-            <span className="text-white/20">está drenando seu tempo?</span>
+            Gerir é difícil. <br className="hidden md:block" />
+            <span className="text-white/20">Ver seu tempo sumir é pior.</span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-white/40 text-lg md:text-2xl mt-8 max-w-3xl mx-auto leading-relaxed"
+          >
+            O método tradicional de gestão está quebrado. Planilhas infinitas e ferramentas complexas não trazem lucro, trazem ansiedade e paralisia.
+          </motion.p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">

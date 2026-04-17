@@ -40,13 +40,18 @@ const MarketRadar = () => {
     <div className="max-w-7xl mx-auto px-4 md:px-6">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6 md:gap-8">
         <div className="text-center md:text-left">
-          <h2 className="text-3xl md:text-6xl font-bold mb-3 md:mb-4 leading-tight">Radar <span className="text-vorix-orange">Vorix</span></h2>
-          <p className="text-white/50 text-base md:text-xl max-w-xl mx-auto md:mx-0">Mercado em tempo real e oportunidades estratégicas na palma da sua mão.</p>
+          <h2 className="text-3xl md:text-6xl font-bold mb-3 md:mb-4 leading-tight">O mundo não para. <br className="md:hidden"/> <span className="text-vorix-orange">Seu sistema também não.</span></h2>
+          <p className="text-white/50 text-base md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed font-medium">O Radar Vorix monitora variações globais que impactam seu bolso em tempo real. Esteja sempre um passo à frente dos riscos e das oportunidades.</p>
         </div>
-        <button className="premium-button premium-button-secondary flex items-center justify-center gap-2 text-xs md:text-sm font-bold h-fit w-full md:w-auto py-4 md:py-3">
+        <a 
+          href="https://vorix-project.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="premium-button premium-button-secondary flex items-center justify-center gap-2 text-xs md:text-sm font-bold h-fit w-full md:w-auto py-4 md:py-3"
+        >
           <RefreshCcw size={16} />
           Atualizar Radar
-        </button>
+        </a>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -93,7 +98,15 @@ const MarketRadar = () => {
             <p className="text-xs md:text-sm text-white/30">Atualiza diariamente com notícias reais do ecossistema financeiro.</p>
           </div>
         </div>
-        <button className="premium-button premium-button-primary w-full md:w-auto px-8 py-4">Acessar News</button>
+        <a 
+          href="https://vorix-project.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="premium-button premium-button-primary w-full md:w-auto px-8 py-4 flex items-center justify-center font-bold"
+        >
+          Acessar News
+        </a>
+
       </motion.div>
     </div>
   );

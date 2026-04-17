@@ -29,11 +29,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-4xl xs:text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.9] mb-10"
+          className="text-4xl xs:text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.9] mb-8"
         >
-          Domine sua gestão <br className="hidden md:block" />
+          Sua gestão não precisa <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-vorix-orange to-orange-400">
-            sem esforço.
+            ser um caos.
           </span>
         </motion.h1>
 
@@ -41,9 +41,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-3xl text-white/60 max-w-4xl mx-auto mb-16 leading-tight font-medium px-4"
+          className="text-lg md:text-2xl text-white/50 max-w-3xl mx-auto mb-12 leading-relaxed font-medium px-4"
         >
-          O Vorix elimina o ruído da sua operação e traz clareza total. Pare de brigar com planilhas, comece a ver lucro real.
+          O Vorix é o cérebro que sua operação merece. Deixamos de lado a complexidade e entregamos <span className="text-white">clareza absoluta</span> para você focar no que realmente importa: crescer.
         </motion.p>
 
         <motion.div
@@ -52,14 +52,25 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-20 px-4"
         >
-          <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-lg sm:text-2xl px-8 py-5 sm:px-12 sm:py-7 shadow-[0_20px_50px_rgba(255,77,0,0.4)]">
+          <a 
+            href="https://vorix-project.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-lg sm:text-2xl px-8 py-5 sm:px-12 sm:py-7 shadow-[0_20px_50px_rgba(255,77,0,0.4)]"
+          >
             Acessar o App Agora
             <ArrowRight size={22} className="sm:w-[28px] sm:h-[28px]" />
-          </button>
-          <button className="premium-button premium-button-secondary w-full sm:w-auto text-lg sm:text-2xl px-8 py-5 sm:px-12 sm:py-7">
+          </a>
+          <a 
+            href="https://vorix-project.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="premium-button premium-button-secondary w-full sm:w-auto text-lg sm:text-2xl px-8 py-5 sm:px-12 sm:py-7"
+          >
             Como funciona?
-          </button>
+          </a>
         </motion.div>
+
 
         {/* Real Dashboard Preview */}
         <motion.div

@@ -54,8 +54,8 @@ const Gamification = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-6">
       <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">Disciplina <span className="text-vorix-orange">Recompensada</span></h2>
-        <p className="text-white/50 text-base md:text-xl">Transforme sua vida financeira em um jogo épico de crescimento.</p>
+        <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">Disciplina que <br className="md:hidden"/> <span className="text-vorix-orange">vira lucro</span></h2>
+        <p className="text-white/50 text-base md:text-xl max-w-2xl mx-auto">Não é sobre jogar. É sobre construir hábitos de alta performance. O Vorix usa psicologia comportamental para manter você no caminho da rentabilidade.</p>
       </div>
 
       <div className="glass-card p-5 md:p-8 bg-vorix-card/40 border-white/5 space-y-4">

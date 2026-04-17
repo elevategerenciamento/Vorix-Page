@@ -5,35 +5,36 @@ import { LayoutDashboard, Wallet, Brain, Trophy, FileText, LineChart } from 'luc
 const Features = () => {
   const features = [
     {
-      title: "Clareza Absoluta",
-      desc: "Pare de se perder em planilhas confusas. O Vorix entrega o que importa: a visão real do seu lucro em segundos.",
+      title: "Visão de Águia",
+      desc: "Pare de olhar para o passado. Veja sua operação em tempo real com métricas que realmente movem o ponteiro do seu lucro.",
       icon: <LayoutDashboard size={24} className="text-vorix-orange" />,
     },
     {
-      title: "Recuperação de Margem",
-      desc: "Identifique gargalos financeiros e desperdícios ocultos que estão drenando o caixa da sua operação.",
+      title: "Estanque o Sangramento",
+      desc: "Nós encontramos onde o seu dinheiro está vazando. Identificamos custos invisíveis e recuperamos sua margem de lucro.",
       icon: <Wallet size={24} className="text-blue-400" />,
     },
     {
-      title: "Decisões sem Dúvida",
-      desc: "Nossa I.A. analisa seus dados e te entrega o próximo passo. Sem achismos, apenas estratégia pura.",
+      title: "Direção Técnica",
+      desc: "Nossa I.A. não dá palpites. Ela analisa padrões e sugere ações baseadas em dados concretos, removendo o medo de errar.",
       icon: <Brain size={24} className="text-purple-400" />,
     },
     {
-      title: "Disciplina Viral",
-      desc: "A gamificação não é um jogo, é um método. Mantemos você no caminho certo até que o sucesso seja automático.",
+      title: "Hábito de Vencer",
+      desc: "A gamificação transforma o trabalho duro em progresso visível. Criamos um ciclo de produtividade impossível de ignorar.",
       icon: <Trophy size={24} className="text-yellow-400" />,
     },
     {
-      title: "Dados que Vendem",
-      desc: "Gere relatórios de performance que convencem investidores e mostram a força do seu negócio.",
+      title: "Autoridade em Dados",
+      desc: "Gere relatórios profissionais que falam a língua do dinheiro. Mostre para o mundo o valor real da sua operação.",
       icon: <FileText size={24} className="text-emerald-400" />,
     },
     {
-      title: "Oportunidades Reais",
-      desc: "Um radar conectado ao mundo para que você nunca perca uma variação de mercado que impacte seu bolso.",
+      title: "Radar Estratégico",
+      desc: "Nunca seja pego de surpresa. Tenha um sistema que monitora o mercado para você, alertando sobre riscos e oportunidades.",
       icon: <LineChart size={24} className="text-rose-400" />,
     },
+
   ];
 
   return (

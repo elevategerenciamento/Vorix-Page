@@ -20,9 +20,20 @@
   }
   
   body {
-    @apply bg-vorix-black text-white antialiased selection:bg-vorix-orange/30 overflow-x-hidden;
+    @apply bg-vorix-black text-white antialiased selection:bg-vorix-orange/30 overflow-x-hidden relative;
     font-family: var(--font-sans);
   }
+  
+  body::before {
+    content: '';
+    @apply absolute inset-0 z-[-1] opacity-[0.03] pointer-events-none;
+    background-image: 
+      linear-gradient(to right, white 1px, transparent 1px),
+      linear-gradient(to bottom, white 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+  }
+
   
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight;
