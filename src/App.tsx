@@ -24,7 +24,8 @@ import {
   StickyNote, 
   Bot, 
   Star, 
-  FileText 
+  FileText,
+  Zap
 } from 'lucide-react';
 
 function App() {
@@ -104,25 +105,38 @@ function App() {
 
         <ProblemSection />
         
-        <div className="flex justify-center py-10 md:py-20 px-6">
+        <div className="flex justify-center py-16 md:py-32 px-6">
           <motion.a 
             href="https://vorix-project.vercel.app/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            initial={{ scale: 0.95 }}
-            whileHover={{ scale: 1.05 }}
+            initial={{ scale: 0.98, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="premium-button premium-button-primary w-full sm:w-auto flex flex-col items-center justify-center gap-2 text-xl md:text-3xl px-12 py-8 md:px-20 md:py-10 shadow-[0_0_60px_rgba(255,77,0,0.5)] relative overflow-hidden group"
+            className="premium-button premium-button-primary w-full max-w-4xl flex items-center justify-between gap-6 px-10 py-8 md:px-16 md:py-12 group relative overflow-hidden shadow-[0_40px_80px_rgba(255,77,0,0.3)]"
           >
-             <div className="absolute inset-0 bg-gradient-to-r from-vorix-orange to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-             <span className="relative z-10 font-black tracking-tight uppercase">Quero transformar minha gestão agora</span>
-             <div className="relative z-10 flex items-center gap-2 text-sm font-bold text-white/60 tracking-[0.3em] uppercase">
-                Ação Imediata <ArrowRight size={16} />
+             {/* Dynamic background glow */}
+             <div className="absolute inset-0 bg-gradient-to-r from-vorix-orange via-orange-500 to-vorix-orange opacity-0 group-hover:opacity-10 transition-opacity duration-1000" />
+             
+             <div className="flex flex-col items-start text-left z-10">
+               <span className="text-2xl md:text-5xl font-black tracking-tight uppercase leading-none mb-4 group-hover:translate-x-1 transition-transform">
+                 Quero transformar <br className="hidden md:block"/> minha gestão agora
+               </span>
+               <div className="flex items-center gap-2 text-[10px] md:text-xs font-black text-white/40 tracking-[0.4em] uppercase">
+                 <Zap size={12} className="text-vorix-orange" /> Acesso imediato ao ecossistema
+               </div>
              </div>
-             {/* Animating Pulse Circle */}
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border-2 border-vorix-orange/50 rounded-full animate-ping scale-150 opacity-0 group-hover:block" />
+
+             <div className="hidden sm:flex w-20 h-20 md:w-28 md:h-28 rounded-full bg-white/10 items-center justify-center group-hover:bg-white group-hover:text-vorix-black transition-all duration-500 z-10">
+                <ArrowRight size={48} className="group-hover:translate-x-2 transition-transform" />
+             </div>
+
+             {/* Mobile Arrow */}
+             <ArrowRight size={32} className="sm:hidden z-10" />
           </motion.a>
         </div>
+
 
 
         <section id="features" className="py-24 px-6 relative">

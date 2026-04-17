@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, TrendingUp } from 'lucide-react';
 
 const Footer = () => {
   const instagramLink = "https://www.instagram.com/br.financeiro/";
@@ -12,8 +12,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 bg-vorix-orange rounded-xl flex items-center justify-center font-bold text-white shadow-[0_0_20px_rgba(255,77,0,0.3)]">V</div>
-            <span className="font-bold tracking-tighter text-2xl">VORIX</span>
+            <div className="w-10 h-10 bg-vorix-orange rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,77,0,0.3)]">
+              <TrendingUp size={24} className="text-white" />
+            </div>
+            <span className="font-bold tracking-tighter text-2xl uppercase">VORIX</span>
           </div>
 
           <h2 className="text-2xl md:text-4xl font-bold mb-6 max-w-2xl leading-tight">
