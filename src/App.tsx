@@ -55,16 +55,28 @@ function App() {
               Nossa missão é transformar números frios em decisões estratégicas automáticas. 
               Aqui, cada pixel foi desenhado para remover o ruído e focar no que realmente expande sua operação.
             </motion.p>
+
+            {/* Small icon set instead of another full screen */}
+            <div className="flex justify-center gap-8 mt-12 text-white/20">
+              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/5"><Plus size={20} /></div>
+              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/5"><Plus size={20} /></div>
+              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/5"><Plus size={20} /></div>
+            </div>
           </div>
         </section>
 
         <ProblemSection />
         
         <div className="flex justify-center py-6 md:py-10 px-6">
-          <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-base md:text-lg px-8 py-4">
+          <a 
+            href="https://vorix-project.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-base md:text-lg px-8 py-4"
+          >
              Quero transformar minha gestão agora
              <ArrowRight size={18} />
-          </button>
+          </a>
         </div>
 
         <section id="features" className="py-24 px-6 relative">
@@ -105,18 +117,19 @@ function App() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-gradient-to-b from-vorix-black to-vorix-dark/50">
-          <DashboardPreview />
-        </section>
-
         <section id="ai" className="py-24 px-6 md:py-32">
           <AIShowcase />
           
           <div className="flex justify-center mt-24">
-            <button className="premium-button premium-button-secondary flex items-center gap-3 text-lg md:text-xl px-10 py-5">
+            <a 
+              href="https://vorix-project.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="premium-button premium-button-secondary flex items-center gap-3 text-lg md:text-xl px-10 py-5"
+            >
                Falar com a IA Vorix agora
                <ArrowRight size={20} />
-            </button>
+            </a>
           </div>
         </section>
 
@@ -129,16 +142,20 @@ function App() {
           <MarketRadar />
         </section>
 
-        <section className="py-32 px-6 text-center border-t border-white/5 bg-vorix-orange/[0.02]">
-           <motion.div
-             initial={{ opacity: 0, scale: 0.9 }}
-             whileInView={{ opacity: 1, scale: 1 }}
-             className="max-w-4xl mx-auto"
-           >
-              <h2 className="text-3xl md:text-7xl font-bold mb-6 md:mb-8 leading-tight">
-                Pronto para deixar a <span className="text-white/30">confusão para trás?</span>
+        <section className="py-24 md:py-48 px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="glass-card p-10 md:p-20 relative overflow-hidden bg-vorix-orange/5 border-vorix-orange/20"
+            >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-vorix-orange to-transparent" />
+              
+              <h2 className="text-4xl md:text-8xl font-black mb-8 md:mb-12 tracking-tighter leading-none">
+                A Revolução <br className="hidden md:block" />
+                <span className="text-vorix-orange">Começa Aqui.</span>
               </h2>
-              <p className="text-lg md:text-xl text-white/50 mb-10 md:mb-12">
+              <p className="text-white/40 text-lg md:text-3xl mb-12 md:mb-16 max-w-2xl mx-auto leading-relaxed">
                 Não perca mais tempo com ferramentas que não entregam resultados. 
                 O Vorix é a evolução que sua operação precisa.
               </p>
@@ -146,13 +163,14 @@ function App() {
                 href="https://vorix-project.vercel.app/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-lg md:text-2xl px-6 py-4 md:px-12 md:py-6 mx-auto shadow-[0_0_50px_rgba(255,77,0,0.3)]"
+                className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-3 text-lg md:text-2xl px-6 py-5 md:px-12 md:py-6 mx-auto shadow-[0_0_50px_rgba(255,77,0,0.3)]"
               >
                 Entrar no Ecossistema Vorix
                 <ArrowRight size={24} className="md:w-[28px] md:h-[28px]" />
               </a>
-             <p className="mt-8 text-sm text-white/20 font-bold uppercase tracking-widest">Acesso imediato • Sem cartão de crédito necessário</p>
-           </motion.div>
+             <p className="mt-8 text-[10px] md:text-sm text-white/20 font-bold uppercase tracking-[0.3em]">Acesso imediato • Interface 100% Mobile-First</p>
+            </motion.div>
+          </div>
         </section>
       </main>
 

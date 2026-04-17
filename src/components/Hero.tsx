@@ -72,16 +72,28 @@ const Hero = () => {
         </motion.div>
 
 
-        {/* Real Dashboard Preview */}
+        {/* Real Dashboard Preview / Mobile Frame */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 40 }}
+          initial={{ opacity: 0, scale: 0.9, y: 40 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-12 md:mt-20 relative group max-w-6xl mx-auto"
+          className="mt-12 md:mt-24 relative inline-block mx-auto"
         >
-          <div className="absolute -inset-1 bg-gradient-to-r from-vorix-orange/30 to-blue-500/20 rounded-[1.5rem] md:rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000" />
-          <div className="relative glass-card p-1 md:p-2 overflow-hidden bg-white/5 border-white/10 scale-[0.85] sm:scale-100 origin-top">
+          {/* Subtle Glow behind the phone */}
+          <div className="absolute -inset-10 bg-vorix-orange/20 blur-[100px] rounded-full opacity-30 animate-pulse" />
+          
+          <div className="relative z-10">
              <RealDashboardPreview />
+          </div>
+          
+          {/* Floating badges around the phone on desktop */}
+          <div className="hidden lg:block absolute -left-20 top-20 bg-vorix-card/80 backdrop-blur-xl p-4 rounded-2xl border border-white/10 shadow-2xl">
+             <div className="flex items-center gap-3">
+               <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-500">
+                 <TrendingUp size={18} />
+               </div>
+               <p className="text-xs font-bold leading-none">Lucratividade +24%</p>
+             </div>
           </div>
         </motion.div>
       </div>
