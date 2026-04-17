@@ -1,0 +1,82 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Play, Sparkles, TrendingUp } from 'lucide-react';
+import RealDashboardPreview from './RealDashboardPreview';
+
+const Hero = () => {
+  return (
+    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
+      {/* Background Glows */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-vorix-orange/10 blur-[120px] rounded-full -mr-64 -mt-32" />
+      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-blue-500/5 blur-[100px] rounded-full -ml-32" />
+
+      <div className="max-w-7xl mx-auto relative z-10 text-center px-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 mb-10"
+        >
+          <div className="w-6 h-6 bg-vorix-orange rounded-md flex items-center justify-center">
+            <TrendingUp size={14} className="text-white" />
+          </div>
+          <span className="text-xs md:text-sm font-bold text-white/80 uppercase tracking-widest">
+            A EVOLUÇÃO DA GESTÃO MODERNA
+          </span>
+          <span className="w-2 h-2 rounded-full bg-vorix-orange animate-pulse" />
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.9] mb-10"
+        >
+          Domine sua gestão <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-vorix-orange to-orange-400">
+            sem esforço.
+          </span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-xl md:text-3xl text-white/60 max-w-4xl mx-auto mb-16 leading-tight font-medium px-4"
+        >
+          O Vorix elimina o ruído da sua operação e traz clareza total. Pare de brigar com planilhas, comece a ver lucro real.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
+        >
+          <button className="premium-button premium-button-primary w-full sm:w-auto flex items-center justify-center gap-4 text-2xl px-12 py-7 shadow-[0_20px_50px_rgba(255,77,0,0.4)]">
+            Acessar o App Agora
+            <ArrowRight size={28} />
+          </button>
+          <button className="premium-button premium-button-secondary w-full sm:w-auto text-2xl px-12 py-7">
+            Como funciona?
+          </button>
+        </motion.div>
+
+        {/* Real Dashboard Preview */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 40 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-20 relative group max-w-6xl mx-auto"
+        >
+          <div className="absolute -inset-1 bg-gradient-to-r from-vorix-orange/30 to-blue-500/20 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200" />
+          <div className="relative glass-card p-1 md:p-2 overflow-hidden bg-white/5 border-white/10">
+             <RealDashboardPreview />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
