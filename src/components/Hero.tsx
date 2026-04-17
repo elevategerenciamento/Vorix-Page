@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, TrendingUp, X, CheckCircle2, Zap, LayoutCircle, Globe } from 'lucide-react';
+import { ArrowRight, TrendingUp, X, CheckCircle2, Zap, Layers, Globe } from 'lucide-react';
 import RealDashboardPreview from './RealDashboardPreview';
 
 const Hero = () => {
@@ -162,7 +162,7 @@ const Hero = () => {
                    
                    {[
                      { title: "Identificação", desc: "O sistema mapeia seus hábitos financeiros e encontra os gargalos de prejuízo que você nem sabia que existiam.", icon: <Globe size={20}/> },
-                     { title: "Direção Técnica", desc: "A IA integrada sugere exatamente onde cortar e onde investir para maximizar seu lucro diário.", icon: <LayoutCircle size={20}/> },
+                     { title: "Direção Técnica", desc: "A IA integrada sugere exatamente onde cortar e onde investir para maximizar seu lucro diário.", icon: <Layers size={20}/> },
                      { title: "Liberdade Real", desc: "Menos tempo olhando dados, mais tempo vivendo. O Vorix faz o trabalho sujo por você.", icon: <ArrowRight size={20}/> }
                    ].map((step, i) => (
                      <div key={i} className="flex gap-6 items-start group">
