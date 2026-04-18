@@ -52,26 +52,20 @@ function App() {
         <Stats />
         
         {/* Quick Clarity Section */}
-        <section className="py-20 px-6 relative overflow-hidden">
+        <section className="py-16 md:py-20 px-6 relative overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            {/* Mobile Swipe Indicator */}
-            <div className="md:hidden flex items-center justify-center gap-2 mb-8 text-white/40 text-[10px] font-black uppercase tracking-widest">
-               <span>Arraste para entender</span>
-               <ArrowRight size={12} className="animate-pulse" />
-            </div>
-
-            <div className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible pb-10 md:pb-0 scrollbar-hide snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
+                className="col-span-2 md:col-span-1 glass-card p-6 md:p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
               >
-                <div className="w-16 h-16 rounded-2xl bg-vorix-orange/10 flex items-center justify-center text-vorix-orange mb-6">
-                  <Target size={32} />
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-vorix-orange/10 flex items-center justify-center text-vorix-orange mb-4 md:mb-6">
+                  <Target size={24} className="md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">O que é?</h3>
-                <p className="text-white/60 leading-relaxed">
+                <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4 uppercase tracking-wider">O que é?</h3>
+                <p className="text-white/40 text-[10px] md:text-base leading-relaxed md:text-white/60">
                   Um ecossistema digital inteligente que centraliza toda a gestão do seu negócio em um único lugar.
                 </p>
               </motion.div>
@@ -81,14 +75,14 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
+                className="glass-card p-6 md:p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
               >
-                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6">
-                  <Zap size={32} />
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4 md:mb-6">
+                  <Zap size={24} className="md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Para que serve?</h3>
-                <p className="text-white/60 leading-relaxed">
-                  Para eliminar a confusão mental, estancar prejuízos e mostrar exatamente onde você deve focar para lucrar mais.
+                <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4 uppercase tracking-wider">Para que?</h3>
+                <p className="text-white/40 text-[10px] md:text-base leading-relaxed md:text-white/60">
+                  Eliminar a confusão mental e estancar prejuízos.
                 </p>
               </motion.div>
 
@@ -97,14 +91,14 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
+                className="glass-card p-6 md:p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
               >
-                <div className="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6">
-                  <Cpu size={32} />
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4 md:mb-6">
+                  <Cpu size={24} className="md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Como funciona?</h3>
-                <p className="text-white/60 leading-relaxed">
-                  Nossa tecnologia processa seus dados em tempo real e entrega sugestões técnicas prontas para execução imediata.
+                <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4 uppercase tracking-wider">Como?</h3>
+                <p className="text-white/40 text-[10px] md:text-base leading-relaxed md:text-white/60">
+                  Processamento de dados em tempo real.
                 </p>
               </motion.div>
             </div>

@@ -68,7 +68,7 @@ const Gamification = () => {
           ))}
         </div>
 
-        <div className="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible pb-6 md:pb-0 scrollbar-hide snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
+        <div className="grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
           {missions.map((mission, index) => (
             <motion.div
               key={mission.title}
@@ -76,31 +76,31 @@ const Gamification = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex-shrink-0 w-[80vw] md:w-auto snap-center bg-vorix-accent/30 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/5 hover:border-white/10 transition-colors flex flex-col justify-between"
+              className={`bg-vorix-accent/30 rounded-xl md:rounded-3xl p-4 md:p-6 border border-white/5 hover:border-white/10 transition-colors flex flex-col justify-between ${index === 4 ? 'col-span-2 md:col-span-1' : ''}`}
             >
-              <div className="flex items-start md:items-center justify-between gap-4 mb-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 md:w-12 h-10 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
-                    {mission.icon}
+              <div className="flex items-start md:items-center justify-between gap-3 mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 md:w-12 h-8 md:h-12 bg-white/5 rounded-lg md:rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
+                    <div className="scale-75 md:scale-100">{mission.icon}</div>
                   </div>
                   <div>
-                    <h4 className={`font-bold text-sm md:text-lg ${mission.completed ? 'text-green-500' : 'text-white'}`}>{mission.title}</h4>
-                    <p className="text-[10px] md:text-xs text-white/60 leading-tight line-clamp-1 md:line-clamp-none">{mission.desc}</p>
+                    <h4 className={`font-bold text-[11px] md:text-lg ${mission.completed ? 'text-green-500' : 'text-white'}`}>{mission.title}</h4>
+                    <p className="text-[8px] md:text-xs text-white/40 leading-tight line-clamp-1 md:line-clamp-none">{mission.desc}</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-end">
-                  <p className="text-xs md:text-sm font-bold text-vorix-orange">{mission.points}</p>
-                  <p className="text-[8px] md:text-[9px] text-vorix-orange/50 font-bold uppercase tracking-widest leading-none">PONTOS</p>
+                  <p className="text-[10px] md:text-sm font-bold text-vorix-orange">{mission.points}</p>
+                  <p className="text-[7px] md:text-[9px] text-vorix-orange/50 font-bold uppercase tracking-widest leading-none">PTS</p>
                 </div>
               </div>
 
               {!mission.completed ? (
-                <div className="space-y-2">
-                  <div className="flex justify-between text-[9px] md:text-[10px] font-bold text-white/40 uppercase tracking-widest">
+                <div className="space-y-1.5 md:space-y-2">
+                  <div className="flex justify-between text-[7px] md:text-[10px] font-bold text-white/30 uppercase tracking-widest">
                     <span>PROGRESSO</span>
                     <span className="tabular-nums">{mission.progress < 10 && mission.progress > 0 ? mission.progress + ' / 1000' : mission.progress === 66 ? '2 / 3' : '0 / 10000'}</span>
                   </div>
-                  <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                  <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
                     <motion.div 
                       initial={{ width: 0 }}
                       whileInView={{ width: `${mission.progress}%` }}
@@ -111,9 +111,9 @@ const Gamification = () => {
                   </div>
                 </div>
               ) : (
-                <div className="flex items-center gap-2 mt-auto">
-                   <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                   <p className="text-[9px] md:text-[10px] text-green-500 font-bold uppercase tracking-widest">MISSÃO CONCLUÍDA</p>
+                <div className="flex items-center gap-1.5 mt-auto">
+                   <div className="w-1 h-1 rounded-full bg-green-500" />
+                   <p className="text-[7px] md:text-[10px] text-green-500 font-bold uppercase tracking-widest">CONCLUÍDO</p>
                 </div>
               )}
             </motion.div>

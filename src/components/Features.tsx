@@ -56,55 +56,47 @@ const Features = () => {
   ];
 
   return (
-    <div>
-      {/* Mobile Swipe Indicator */}
-      <div className="md:hidden flex items-center justify-center gap-2 mb-8 text-white/40 text-[10px] font-black uppercase tracking-widest">
-         <span>Explore as Funcionalidades</span>
-         <Zap size={12} className="text-vorix-orange animate-pulse" />
-      </div>
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
+      {features.map((feature, index) => (
+        <motion.div
+          key={feature.title}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.1, duration: 0.6 }}
+          whileHover={{ y: -10 }}
+          className="relative group h-full"
+        >
+          {/* Background Highlight on Hover */}
+          <div className={`absolute -inset-1 bg-gradient-to-r ${feature.color} rounded-[1.5rem] md:rounded-[2rem] opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`} />
+          
+          <div className="relative h-full bg-[#0A0A0A] border border-white/5 p-5 md:p-10 rounded-[1.5rem] md:rounded-[2rem] flex flex-col justify-between overflow-hidden">
+             {/* Gradient Accent Bar */}
+             <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${feature.color} opacity-30 group-hover:opacity-100 transition-opacity`} />
+             
+             <div>
+                <div className={`w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl ${feature.accent} flex items-center justify-center mb-6 md:mb-10 group-hover:scale-110 transition-transform duration-500`}>
+                  <div className="scale-75 md:scale-100">{feature.icon}</div>
+                </div>
+                <h3 className="text-sm md:text-2xl font-black mb-3 md:mb-6 tracking-tight leading-tight uppercase group-hover:text-white transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-white/40 text-[10px] md:text-lg leading-relaxed group-hover:text-white/80 transition-colors md:text-white/60">
+                  {feature.desc}
+                </p>
+             </div>
 
-      <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible pb-10 md:pb-0 scrollbar-hide snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
-        {features.map((feature, index) => (
-          <motion.div
-            key={feature.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.1, duration: 0.6 }}
-            whileHover={{ y: -10 }}
-            className="flex-shrink-0 w-[85vw] md:w-auto snap-center relative group h-full"
-          >
-            {/* Background Highlight on Hover */}
-            <div className={`absolute -inset-1 bg-gradient-to-r ${feature.color} rounded-[2rem] opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`} />
-            
-            <div className="relative h-full bg-[#0A0A0A] border border-white/5 p-8 md:p-10 rounded-[2rem] flex flex-col justify-between overflow-hidden">
-               {/* Gradient Accent Bar */}
-               <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${feature.color} opacity-30 group-hover:opacity-100 transition-opacity`} />
-               
-               <div>
-                  <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl ${feature.accent} flex items-center justify-center mb-8 md:mb-10 group-hover:scale-110 transition-transform duration-500`}>
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-black mb-4 md:mb-6 tracking-tight leading-tight uppercase group-hover:text-white transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-white/60 text-base md:text-lg leading-relaxed group-hover:text-white/80 transition-colors">
-                    {feature.desc}
-                  </p>
-               </div>
-
-               <div className="mt-8 md:mt-10 flex items-center justify-between">
-                  <div className="flex gap-1">
-                     {[1,2,3].map(i => <div key={i} className={`w-1 h-1 rounded-full bg-gradient-to-r ${feature.color} opacity-20`} />)}
-                  </div>
-                  <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white/10 group-hover:text-white/30 transition-colors">
-                     Engenharia Vorix
-                  </div>
-               </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+             <div className="mt-6 md:mt-10 flex items-center justify-between">
+                <div className="flex gap-1">
+                   {[1,2,3].map(i => <div key={i} className={`w-0.5 h-0.5 md:w-1 md:h-1 rounded-full bg-gradient-to-r ${feature.color} opacity-20`} />)}
+                </div>
+                <div className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] text-white/10 group-hover:text-white/30 transition-colors">
+                   Engenharia
+                </div>
+             </div>
+          </div>
+        </motion.div>
+      ))}
     </div>
   );
 };
