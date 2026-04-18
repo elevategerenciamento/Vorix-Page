@@ -37,8 +37,8 @@ const ReportSection = () => {
               </h2>
               
               <p className="text-white/60 text-lg md:text-2xl mb-12 leading-relaxed max-w-xl">
-                Gere relatórios profissionais e personalizados com total liberdade. 
-                Escolha o período que desejar e tenha o raio-x completo do seu negócio em segundos.
+                Gere relatórios técnicos e personalizados com total liberdade. 
+                Escolha o período, exporte em PDF para o WhatsApp e tenha o raio-x absoluto da sua lucratividade.
               </p>
 
               <div className="space-y-6 mb-12">
@@ -107,64 +107,95 @@ const ReportSection = () => {
               className="relative z-10 perspective-1000"
             >
               {/* Report Mockup */}
-              <div className="bg-white rounded-lg md:rounded-xl shadow-[0_50px_100px_rgba(0,0,0,0.5)] overflow-hidden w-full max-w-[500px] mx-auto group-hover:translate-y-[-10px] transition-transform duration-700">
+              <div className="bg-white rounded-lg md:rounded-xl shadow-[0_50px_100px_rgba(0,0,0,0.5)] overflow-hidden w-full max-w-[550px] mx-auto group-hover:translate-y-[-10px] transition-transform duration-700 font-sans">
                 
-                {/* Header */}
-                <div className="bg-[#050505] text-white p-4 md:p-6 flex justify-between items-center border-b border-white/10">
+                {/* Header (Black Bar) */}
+                <div className="bg-[#050505] text-white p-5 md:p-8 flex justify-between items-start border-b border-white/10">
                   <div>
-                    <div className="text-vorix-orange font-black text-xl md:text-2xl tracking-tighter">VORIX</div>
-                    <div className="text-[8px] md:text-[10px] text-white/40 uppercase tracking-widest">Centro de Comando Financeiro</div>
+                    <div className="text-vorix-orange font-black text-2xl md:text-3xl tracking-tighter mb-1">VORIX</div>
+                    <div className="text-[7px] md:text-[9px] text-white/50 uppercase tracking-[0.3em] font-medium transition-all group-hover:tracking-[0.4em] duration-1000">Centro de Comando Financeiro</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-[10px] md:text-xs font-bold uppercase tracking-tight">Relatório de Movimentações</div>
-                    <div className="text-[8px] md:text-[10px] text-white/40">Gerado em: 18/04/2026, 12:23:45</div>
+                    <div className="text-[9px] md:text-[11px] font-black uppercase tracking-widest mb-1.5">Relatório de Movimentações</div>
+                    <div className="text-[7px] md:text-[9px] text-white/40 font-medium">Gerado em: 18/04/2026, 12:32:25</div>
                   </div>
                 </div>
 
                 {/* Body */}
-                <div className="p-6 md:p-10 bg-white text-black min-h-[500px]">
+                <div className="p-6 md:p-10 bg-white text-black min-h-[550px]">
+                  {/* User & Period Info */}
                   <div className="mb-8">
-                    <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-[#050505]">Oliveira</h3>
-                    <p className="text-xs text-gray-400 font-medium">Período de Análise: 01/12/2025 até 11/02/2026</p>
-                    <div className="h-[2px] w-full bg-gray-100 mt-2" />
+                    <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-[#050505] mb-1">USUARIO OLIVEIRA</h3>
+                    <p className="text-[10px] md:text-xs text-black/80 font-semibold mb-3">Período de Análise: 18/03/2026 até 18/04/2026</p>
+                    <div className="h-[1.5px] w-full bg-black/80" />
                   </div>
 
                   {/* Summary Cards */}
-                  <div className="grid grid-cols-3 gap-3 mb-10">
-                    <div className="border border-gray-200 p-3 rounded-md">
-                      <p className="text-[8px] font-black uppercase text-gray-400 mb-1">Saldo Atual</p>
-                      <p className="text-xs md:text-sm font-black text-[#050505]">R$ 6.450,00</p>
+                  <div className="grid grid-cols-3 gap-3 mb-8">
+                    <div className="border-[1.5px] border-black p-3.5 rounded-sm">
+                      <p className="text-[7px] md:text-[8px] font-black uppercase text-black/60 mb-2 leading-none">Saldo Total Atual</p>
+                      <p className="text-[10px] md:text-[13px] font-black text-[#050505]">R$ 6.450,00</p>
                     </div>
-                    <div className="border border-gray-200 p-3 rounded-md">
-                      <p className="text-[8px] font-black uppercase text-gray-400 mb-1">Entradas</p>
-                      <p className="text-xs md:text-sm font-black text-vorix-orange">R$ 12.840,00</p>
+                    <div className="border-[1.5px] border-black p-3.5 rounded-sm">
+                      <p className="text-[7px] md:text-[8px] font-black uppercase text-black/60 mb-2 leading-none">Entradas no Período</p>
+                      <p className="text-[10px] md:text-[13px] font-black text-vorix-orange">R$ 83,00</p>
                     </div>
-                    <div className="border border-gray-200 p-3 rounded-md">
-                      <p className="text-[8px] font-black uppercase text-gray-400 mb-1">Saídas</p>
-                      <p className="text-xs md:text-sm font-black text-[#050505]">R$ 6.390,00</p>
+                    <div className="border-[1.5px] border-black p-3.5 rounded-sm">
+                      <p className="text-[7px] md:text-[8px] font-black uppercase text-black/60 mb-2 leading-none">Saídas no Período</p>
+                      <p className="text-[10px] md:text-[13px] font-black text-[#050505]">R$ 932,00</p>
                     </div>
                   </div>
 
-                  {/* Net Result */}
-                  <div className="bg-[#050505] p-4 rounded-md mb-10 flex justify-between items-center text-white">
-                    <span className="text-[10px] font-black uppercase tracking-widest">Resultado Líquido:</span>
-                    <span className="text-sm md:text-lg font-black text-vorix-orange">R$ 6.450,00</span>
+                  {/* Net Result (Banner) */}
+                  <div className="bg-[#050505] p-4.5 rounded-sm mb-8 flex justify-between items-center text-white px-6">
+                    <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.15em] text-white/90">Resultado Líquido do Período:</span>
+                    <span className="text-xs md:text-base font-black text-vorix-orange">-R$ 849,00</span>
                   </div>
 
-                  {/* Mock content lines */}
-                  <div className="space-y-4">
-                    <div className="h-4 w-1/2 bg-gray-50 rounded" />
-                    <div className="h-4 w-full bg-gray-50 rounded" />
-                    <div className="h-4 w-full bg-gray-50 rounded" />
-                    <div className="h-4 w-3/4 bg-gray-50 rounded" />
+                  {/* Table */}
+                  <div className="overflow-hidden border border-black/5 rounded-sm">
+                    <table className="w-full text-left border-collapse">
+                      <thead>
+                        <tr className="bg-[#050505] text-white">
+                          <th className="p-2 text-[7px] md:text-[9px] font-black uppercase tracking-wider">Data</th>
+                          <th className="p-2 text-[7px] md:text-[9px] font-black uppercase tracking-wider">Descrição</th>
+                          <th className="p-2 text-[7px] md:text-[9px] font-black uppercase tracking-wider">Conta</th>
+                          <th className="p-2 text-[7px] md:text-[9px] font-black uppercase tracking-wider">Categoria</th>
+                          <th className="p-2 text-[7px] md:text-[9px] font-black uppercase tracking-wider">Tipo</th>
+                          <th className="p-2 text-[7px] md:text-[9px] font-black uppercase tracking-wider text-right">Valor</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {[
+                          { data: "05/04/2026", desc: "Aluguel", conta: "Nubank", cat: "Moradia", tipo: "SAÍDA", valor: "- R$ 251,00", isPositive: false },
+                          { data: "05/04/2026", desc: "Supermercado", conta: "Nubank", cat: "Alimentação", tipo: "SAÍDA", valor: "- R$ 300,00", isPositive: false },
+                          { data: "05/04/2026", desc: "Venda Camisa", conta: "Nubank", cat: "Outros", tipo: "ENTRADA", valor: "+ R$ 83,00", isPositive: true, bg: "bg-[#FAFAFA]" },
+                          { data: "11/04/2026", desc: "Compras supermercado", conta: "Nubank", cat: "Alimentação", tipo: "SAÍDA", valor: "- R$ 381,00", isPositive: false },
+                        ].map((row, i) => (
+                          <tr key={i} className={`border-b border-gray-100 ${row.bg || ''}`}>
+                            <td className="p-2 text-[7px] md:text-[9px] font-medium text-black/60">{row.data}</td>
+                            <td className="p-2 text-[7px] md:text-[9px] font-bold text-black/80">{row.desc}</td>
+                            <td className="p-2 text-[7px] md:text-[9px] font-medium text-black/60">{row.conta}</td>
+                            <td className="p-2 text-[7px] md:text-[9px] font-medium text-black/60">{row.cat}</td>
+                            <td className={`p-2 text-[7px] md:text-[9px] font-bold ${row.isPositive ? 'text-vorix-orange' : 'text-black'}`}>{row.tipo}</td>
+                            <td className={`p-2 text-[7px] md:text-[9px] font-black text-right ${row.isPositive ? 'text-vorix-orange' : 'text-black'}`}>{row.valor}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {/* Placeholder for more content to simulate height */}
+                  <div className="mt-6 flex flex-col gap-2 opacity-10">
+                    <div className="h-1.5 w-full bg-black rounded-full" />
+                    <div className="h-1.5 w-[90%] bg-black rounded-full" />
                   </div>
                 </div>
 
-                {/* Footer */}
-                <div className="bg-white p-4 border-t border-gray-100 flex justify-between items-center">
-                  <span className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">Página 1 de 1</span>
-                  <span className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">Vorix Financial Command Center</span>
-                  <span className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">Relatório Confidencial</span>
+                {/* Report Footer */}
+                <div className="bg-white p-4 border-t border-gray-100 flex justify-between items-center px-8">
+                  <span className="text-[7px] text-black/40 font-bold uppercase tracking-widest">Página 1 de 1</span>
+                  <span className="text-[7px] text-black/40 font-bold uppercase tracking-widest">Vorix Financial Command Center</span>
                 </div>
               </div>
 
