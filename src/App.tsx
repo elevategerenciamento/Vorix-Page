@@ -25,7 +25,8 @@ import {
   Bot, 
   Star, 
   FileText,
-  Zap
+  Zap,
+  Cpu
 } from 'lucide-react';
 
 function App() {
@@ -50,24 +51,75 @@ function App() {
         <Hero />
         <Stats />
         
+        {/* Quick Clarity Section */}
+        <section className="py-20 px-6 relative">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-vorix-orange/10 flex items-center justify-center text-vorix-orange mb-6">
+                <Target size={32} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">O que é?</h3>
+              <p className="text-white/60 leading-relaxed">
+                Um ecossistema digital inteligente que centraliza toda a gestão do seu negócio em um único lugar.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6">
+                <Zap size={32} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Para que serve?</h3>
+              <p className="text-white/60 leading-relaxed">
+                Para eliminar a confusão mental, estancar prejuízos e mostrar exatamente onde você deve focar para lucrar mais.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6">
+                <Cpu size={32} />
+              </div>
+              <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Como funciona?</h3>
+              <p className="text-white/60 leading-relaxed">
+                Nossa IA processa seus dados em tempo real e entrega sugestões técnicas prontas para execução imediata.
+              </p>
+            </motion.div>
+          </div>
+        </section>
         {/* Why Vorix / Identity Section */}
         <section className="py-24 px-6 bg-gradient-to-b from-vorix-black to-vorix-dark">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-7xl font-black mb-8 leading-tight tracking-tighter uppercase"
+              className="text-3xl md:text-5xl font-bold mb-8 leading-tight"
             >
-              PARE DE <span className="text-white/20">PERDER DINHEIRO</span> <br className="hidden md:block"/>
-              POR FALTA DE <span className="text-vorix-orange">DIREÇÃO.</span>
+              Não é apenas um dashboard. <br/>
+              <span className="text-white/50">É a inteligência por trás do seu lucro.</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-3xl text-white/70 leading-tight font-bold mb-12 max-w-3xl mx-auto"
+              className="text-base md:text-xl text-white/70 leading-relaxed font-normal mb-12 max-w-2xl mx-auto"
             >
-              O Vorix é a ferramenta definitiva para quem quer escalar com lucro real. <br className="hidden md:block"/> Sem "achismo". Sem planilhas infinitas. Apenas resultados técnicos.
+              O Vorix organiza sua operação para que você tome decisões baseadas em dados, não em palpites. Transformamos a confusão financeira em uma rota clara de crescimento.
             </motion.p>
 
             {/* Mini-Feature Showcase */}
@@ -209,12 +261,13 @@ function App() {
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-vorix-orange to-transparent" />
               
-              <h2 className="text-4xl md:text-8xl font-black mb-8 md:mb-12 tracking-tighter leading-[0.85] uppercase italic">
-                A HORA DA <br className="hidden md:block" />
-                <span className="text-vorix-orange">DECISÃO.</span>
+              <h2 className="text-4xl md:text-8xl font-black mb-8 md:mb-12 tracking-tighter leading-none">
+                A Revolução <br className="hidden md:block" />
+                <span className="text-vorix-orange">Começa Aqui.</span>
               </h2>
-              <p className="text-white/60 text-lg md:text-3xl mb-12 md:mb-16 max-w-2xl mx-auto leading-relaxed font-bold">
-                Você vai continuar perdendo lucro para o amadorismo ou vai subir para o nível técnico?
+              <p className="text-white/60 text-lg md:text-3xl mb-12 md:mb-16 max-w-2xl mx-auto leading-relaxed">
+                Não perca mais tempo com ferramentas que não entregam resultados. 
+                O Vorix é a evolução que sua operação precisa para crescer.
               </p>
               <a 
                 href="https://vorix-project.vercel.app/" 

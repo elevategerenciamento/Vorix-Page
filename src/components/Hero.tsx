@@ -16,27 +16,21 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 mb-10"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8"
         >
-          <div className="w-6 h-6 bg-vorix-orange rounded-md flex items-center justify-center">
-            <TrendingUp size={14} className="text-white" />
-          </div>
-          <span className="text-[10px] md:text-sm font-bold text-white/90 uppercase tracking-widest">
-            A EVOLUÇÃO DA GESTÃO MODERNA
-          </span>
-          <span className="w-2 h-2 rounded-full bg-vorix-orange animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-vorix-orange animate-pulse" />
+          <span className="text-[10px] md:text-xs font-black tracking-[0.2em] uppercase text-white/60">SISTEMA DE GESTÃO INTELIGENTE</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-4xl xs:text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.85] mb-8 uppercase italic"
+          className="text-4xl xs:text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.9] mb-8"
         >
-          PARE DE <br className="hidden md:block" />
+          Sua gestão não precisa <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-vorix-orange to-orange-400">
-            CHUTAR RESULTADOS.
+            ser um caos.
           </span>
         </motion.h1>
 
@@ -44,10 +38,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-4xl text-white font-black max-w-4xl mx-auto mb-12 uppercase tracking-tight px-4"
+          className="text-lg md:text-2xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed font-medium px-4"
         >
-          MAIS <span className="text-vorix-orange">CLAREZA</span>. MAIS <span className="text-vorix-orange">LUCRO</span>. <br/>
-          <span className="text-white/50 text-lg md:text-2xl font-bold lowercase italic tracking-normal">A única inteligência técnica que organiza sua operação em segundos.</span>
+          O Vorix é a inteligência que organiza suas finanças e sugere decisões para você lucrar mais. <span className="text-white">Clareza absoluta</span> para você focar no que realmente importa: crescer sua operação.
         </motion.p>
 
         <motion.div

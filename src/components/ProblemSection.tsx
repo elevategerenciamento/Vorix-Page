@@ -40,18 +40,18 @@ const ProblemSection = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-8xl font-black mt-6 md:mt-10 tracking-tighter leading-[0.85] max-w-5xl mx-auto uppercase italic"
+            className="text-4xl md:text-8xl font-black mt-6 md:mt-10 tracking-tighter leading-[0.9] max-w-5xl mx-auto"
           >
-            Sua operação está <br className="hidden md:block" />
-            <span className="text-white/20">DRENANDO SEU LUCRO?</span>
+            Enquanto você luta contra o caos, <br className="hidden md:block" />
+            <span className="text-white/40 italic">seu lucro escorre pelas mãos.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-white/60 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-bold uppercase tracking-tight"
+            className="text-white/60 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-medium"
           >
-            A falta de técnica custa caro. Se você não controla seus números, você não tem um negócio, tem uma aposta perigosa.
+            A falta de clareza custa caro. Sem o controle real dos seus números, decisões importantes acabam virando apenas palpites arriscados.
           </motion.p>
         </div>
 
