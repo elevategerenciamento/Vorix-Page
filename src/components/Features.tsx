@@ -12,43 +12,43 @@ import {
 const Features = () => {
   const features = [
     {
-      title: "Visão Ultra de Águia",
-      desc: "Veja sua operação com claridade cristalina. Nosso motor processa dados e entrega o que realmente importa para expandir seu lucro.",
+      title: "Lucro Sob Controle",
+      desc: "Saiba exatamente para onde vai cada centavo. Sem surpresas no fim do mês, apenas previsibilidade absoluta.",
       icon: <BarChart3 size={32} />,
       color: "from-blue-500 to-cyan-400",
       accent: "bg-blue-500/10 text-blue-400"
     },
     {
-      title: "IA Preditiva Integrada",
-      desc: "O Vorix antecipa riscos e identifica oportunidades de economia automática que você nem sabia que existiam.",
+      title: "Antecipação Técnica",
+      desc: "A nossa IA corta gastos desnecessários antes que eles virem prejuízo real no seu caixa.",
       icon: <Cpu size={32} />,
       color: "from-purple-500 to-pink-500",
       accent: "bg-purple-500/10 text-purple-400"
     },
     {
-      title: "Segurança de Elite",
-      desc: "Seus dados são seu maior ativo. Protegemos cada transação com tecnologia de ponta para sua total paz de espírito.",
+      title: "Blindagem de Dados",
+      desc: "Seus números são seu maior segredo. Protegemos sua operação com segurança de nível bancário.",
       icon: <ShieldCheck size={32} />,
       color: "from-emerald-500 to-teal-400",
       accent: "bg-emerald-500/10 text-emerald-400"
     },
     {
-      title: "Execução Instantânea",
-      desc: "Reduza tarefas manuais em até 90%. O Vorix automatiza o trabalho pesado para você focar apenas na estratégia.",
+      title: "Escala Automática",
+      desc: "Recupere até 10 horas semanais automatizando processos que hoje drenam sua energia.",
       icon: <Zap size={32} />,
       color: "from-vorix-orange to-amber-500",
       accent: "bg-orange-500/10 text-vorix-orange"
     },
     {
-      title: "Metas de Alta Precisão",
-      desc: "Pare de perseguir metas genéricas. Defina objetivos técnicos e acompanhe o progresso com fidelidade absoluta.",
+      title: "Direção de Metas",
+      desc: "Pare de 'achar' e comece a 'saber'. Defina objetivos reais baseados no seu comportamento financeiro.",
       icon: <Target size={32} />,
       color: "from-rose-500 to-red-400",
       accent: "bg-rose-500/10 text-rose-400"
     },
     {
-      title: "Ecossistema Modular",
-      desc: "O Vorix se adapta à sua escala. Tudo o que você precisa em uma única engenharia integrada e elegante.",
+      title: "Central de Poder",
+      desc: "Toda a sua engenharia de gestão conectada em um único ecossistema modular e eficiente.",
       icon: <Layers size={32} />,
       color: "from-indigo-500 to-blue-500",
       accent: "bg-indigo-500/10 text-indigo-400"

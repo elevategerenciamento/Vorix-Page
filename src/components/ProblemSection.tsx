@@ -40,18 +40,18 @@ const ProblemSection = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-8xl font-black mt-6 md:mt-10 tracking-tighter leading-[0.9] max-w-5xl mx-auto"
+            className="text-4xl md:text-8xl font-black mt-6 md:mt-10 tracking-tighter leading-[0.85] max-w-5xl mx-auto uppercase italic"
           >
-            Enquanto você luta contra o caos, <br className="hidden md:block" />
-            <span className="text-white/40 italic">seu lucro escorre pelas mãos.</span>
+            Sua operação está <br className="hidden md:block" />
+            <span className="text-white/20">DRENANDO SEU LUCRO?</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-white/60 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-medium"
+            className="text-white/60 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-bold uppercase tracking-tight"
           >
-            Gerir sem inteligência técnica é como pilotar no escuro. Estes são os sintomas de quem ainda está preso ao passado.
+            A falta de técnica custa caro. Se você não controla seus números, você não tem um negócio, tem uma aposta perigosa.
           </motion.p>
         </div>
 

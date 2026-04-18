@@ -18,8 +18,8 @@ const AIShowcase = () => {
         <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tighter">
           Seu consultor técnico, <span className="text-white/60">na velocidade do agora.</span>
         </h2>
-        <p className="text-base md:text-xl text-white/70 mb-8 md:mb-10 leading-relaxed font-medium">
-          A I.A. Vorix não é um chat externo ou um bot genérico. Ela vive <strong>dentro do seu dashboard</strong>, processando cada centavo que entra e sai da sua conta em tempo real. É o seu consultor técnico que nunca dorme, focado em apontar falhas antes que elas aconteçam.
+        <p className="text-base md:text-xl text-white/70 mb-8 md:mb-10 leading-relaxed font-bold uppercase tracking-tight">
+          A I.A. Vorix não é um bot de conversa. É uma <strong>unidade de processamento técnico</strong> que vive no seu caixa, cortando gargalos de prejuízo em tempo real.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-6 text-left">
