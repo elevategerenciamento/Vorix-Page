@@ -83,7 +83,7 @@ const Features = () => {
                
                <div>
                   <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl ${feature.accent} flex items-center justify-center mb-8 md:mb-10 group-hover:scale-110 transition-transform duration-500`}>
-                    {React.cloneElement(feature.icon as React.ReactElement, { size: 28 })}
+                    {feature.icon}
                   </div>
                   <h3 className="text-xl md:text-2xl font-black mb-4 md:mb-6 tracking-tight leading-tight uppercase group-hover:text-white transition-colors">
                     {feature.title}
