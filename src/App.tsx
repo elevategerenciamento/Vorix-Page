@@ -97,7 +97,7 @@ function App() {
               </div>
               <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Como funciona?</h3>
               <p className="text-white/60 leading-relaxed">
-                Nossa IA processa seus dados em tempo real e entrega sugestões técnicas prontas para execução imediata.
+                Nossa tecnologia processa seus dados em tempo real e entrega sugestões técnicas prontas para execução imediata.
               </p>
             </motion.div>
           </div>
@@ -237,7 +237,7 @@ function App() {
               rel="noopener noreferrer" 
               className="premium-button premium-button-secondary flex items-center gap-3 text-lg md:text-xl px-10 py-5 font-bold uppercase"
             >
-               ELIMINAR GARGALOS COM A IA
+               ELIMINAR GARGALOS TECNICAMENTE
                <ArrowRight size={20} />
             </a>
           </div>

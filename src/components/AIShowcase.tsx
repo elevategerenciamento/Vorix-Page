@@ -19,12 +19,12 @@ const AIShowcase = () => {
           Seu consultor técnico, <span className="text-white/60">na velocidade do agora.</span>
         </h2>
         <p className="text-base md:text-xl text-white/70 mb-8 md:mb-10 leading-relaxed font-bold uppercase tracking-tight">
-          A I.A. Vorix não é um bot de conversa. É uma <strong>unidade de processamento técnico</strong> que vive no seu caixa, cortando gargalos de prejuízo em tempo real.
+          A Tecnologia Vorix não é um bot de conversa. É uma <strong>unidade de processamento técnico</strong> que vive no seu caixa, cortando gargalos de prejuízo em tempo real.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-6 text-left">
           {[
-            { title: "Análise Integrada", desc: "Diferente de IAs comuns, a Vorix conhece seus números e responde com base neles.", icon: <Brain size={20} className="text-vorix-orange" /> },
+            { title: "Análise Integrada", desc: "Diferente de sistemas comuns, a Vorix conhece seus números e responde com base neles.", icon: <Brain size={20} className="text-vorix-orange" /> },
             { title: "Predição de Riscos", desc: "Detectamos anomalias no seu fluxo antes que virem prejuízo.", icon: <Shield size={20} className="text-vorix-orange" /> },
           ].map((item) => (
             <div key={item.title} className="flex flex-col gap-4 p-6 glass-card bg-white/5 border-white/5">
@@ -67,7 +67,7 @@ const AIShowcase = () => {
                 <Bot className="text-white" size={24} />
               </div>
               <div>
-                <h3 className="font-bold">IA VORIX</h3>
+                <h3 className="font-bold">CORE VORIX</h3>
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   <span className="text-[10px] text-green-500 font-bold uppercase tracking-widest">ONLINE</span>

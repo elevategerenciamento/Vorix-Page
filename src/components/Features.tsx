@@ -20,7 +20,7 @@ const Features = () => {
     },
     {
       title: "Antecipação Técnica",
-      desc: "A nossa IA corta gastos desnecessários antes que eles virem prejuízo real no seu caixa.",
+      desc: "A nossa engenharia corta gastos desnecessários antes que eles virem prejuízo real no seu caixa.",
       icon: <Cpu size={32} />,
       color: "from-purple-500 to-pink-500",
       accent: "bg-purple-500/10 text-purple-400"
