@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DollarSign, Bitcoin, TrendingUp, RefreshCcw } from 'lucide-react';
+import { DollarSign, Bitcoin, TrendingUp, Globe, Newspaper } from 'lucide-react';
 
 const MarketRadar = () => {
   const markets = [
@@ -43,15 +43,7 @@ const MarketRadar = () => {
           <h2 className="text-3xl md:text-6xl font-bold mb-3 md:mb-4 leading-tight">O mundo não para. <br className="md:hidden"/> <span className="text-vorix-orange">Seu sistema também não.</span></h2>
           <p className="text-white/70 text-base md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed font-medium">O Radar Vorix monitora variações globais que impactam seu bolso em tempo real. Esteja sempre um passo à frente dos riscos e das oportunidades.</p>
         </div>
-        <a 
-          href="https://vorix-project.vercel.app/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="premium-button premium-button-secondary flex items-center justify-center gap-2 text-xs md:text-sm font-bold h-fit w-full md:w-auto py-4 md:py-3"
-        >
-          <RefreshCcw size={16} />
-          Atualizar Radar
-        </a>
+        {/* Remove update button as requested */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -91,11 +83,11 @@ const MarketRadar = () => {
       >
         <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-4 md:gap-6">
           <div className="w-12 md:w-16 h-12 md:h-16 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white/60">
-            <RefreshCcw size={24} className="md:w-[32px] md:h-[32px]" />
+            <Globe size={24} className="md:w-[32px] md:h-[32px]" />
           </div>
           <div>
-            <h4 className="text-lg md:text-xl font-bold">Notícias de Hoje</h4>
-            <p className="text-xs md:text-sm text-white/50">Atualiza diariamente com notícias reais do ecossistema financeiro.</p>
+            <h4 className="text-lg md:text-xl font-bold">Monitoramento de Mercado</h4>
+            <p className="text-xs md:text-sm text-white/50">Fluxo contínuo de dados monitorados pela inteligência técnica Vorix.</p>
           </div>
         </div>
         <a 
