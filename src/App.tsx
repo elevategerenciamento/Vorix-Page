@@ -52,78 +52,86 @@ function App() {
         <Stats />
         
         {/* Quick Clarity Section */}
-        <section className="py-20 px-6 relative">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
-            >
-              <div className="w-16 h-16 rounded-2xl bg-vorix-orange/10 flex items-center justify-center text-vorix-orange mb-6">
-                <Target size={32} />
-              </div>
-              <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">O que é?</h3>
-              <p className="text-white/60 leading-relaxed">
-                Um ecossistema digital inteligente que centraliza toda a gestão do seu negócio em um único lugar.
-              </p>
-            </motion.div>
+        <section className="py-20 px-6 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            {/* Mobile Swipe Indicator */}
+            <div className="md:hidden flex items-center justify-center gap-2 mb-8 text-white/40 text-[10px] font-black uppercase tracking-widest">
+               <span>Arraste para entender</span>
+               <ArrowRight size={12} className="animate-pulse" />
+            </div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
-            >
-              <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6">
-                <Zap size={32} />
-              </div>
-              <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Para que serve?</h3>
-              <p className="text-white/60 leading-relaxed">
-                Para eliminar a confusão mental, estancar prejuízos e mostrar exatamente onde você deve focar para lucrar mais.
-              </p>
-            </motion.div>
+            <div className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible pb-10 md:pb-0 scrollbar-hide snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-vorix-orange/10 flex items-center justify-center text-vorix-orange mb-6">
+                  <Target size={32} />
+                </div>
+                <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">O que é?</h3>
+                <p className="text-white/60 leading-relaxed">
+                  Um ecossistema digital inteligente que centraliza toda a gestão do seu negócio em um único lugar.
+                </p>
+              </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
-            >
-              <div className="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6">
-                <Cpu size={32} />
-              </div>
-              <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Como funciona?</h3>
-              <p className="text-white/60 leading-relaxed">
-                Nossa tecnologia processa seus dados em tempo real e entrega sugestões técnicas prontas para execução imediata.
-              </p>
-            </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6">
+                  <Zap size={32} />
+                </div>
+                <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Para que serve?</h3>
+                <p className="text-white/60 leading-relaxed">
+                  Para eliminar a confusão mental, estancar prejuízos e mostrar exatamente onde você deve focar para lucrar mais.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-card p-10 bg-vorix-card/20 border-white/5 text-center flex flex-col items-center"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6">
+                  <Cpu size={32} />
+                </div>
+                <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">Como funciona?</h3>
+                <p className="text-white/60 leading-relaxed">
+                  Nossa tecnologia processa seus dados em tempo real e entrega sugestões técnicas prontas para execução imediata.
+                </p>
+              </motion.div>
+            </div>
           </div>
         </section>
         {/* Why Vorix / Identity Section */}
-        <section className="py-24 px-6 bg-gradient-to-b from-vorix-black to-vorix-dark">
+        <section className="py-16 md:py-32 px-6 bg-gradient-to-b from-vorix-black to-vorix-dark">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-5xl font-bold mb-8 leading-tight"
+              className="text-2xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight px-2"
             >
-              Não é apenas um dashboard. <br/>
+              Não é apenas um dashboard. <br className="hidden md:block"/>
               <span className="text-white/50">É a inteligência por trás do seu lucro.</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-base md:text-xl text-white/70 leading-relaxed font-normal mb-12 max-w-2xl mx-auto"
+              className="text-sm md:text-xl text-white/70 leading-relaxed font-normal mb-8 md:mb-12 max-w-2xl mx-auto px-4"
             >
               O Vorix organiza sua operação para que você tome decisões baseadas em dados, não em palpites. Transformamos a confusão financeira em uma rota clara de crescimento.
             </motion.p>
 
             {/* Mini-Feature Showcase */}
-            <div className="mt-16 max-w-3xl mx-auto flex flex-wrap justify-center gap-3 md:gap-4 px-4">
+            <div className="mt-8 md:mt-16 max-w-3xl mx-auto flex flex-wrap justify-center gap-2 md:gap-4 px-2 md:px-4">
               {[
                 { name: 'Dashboard', icon: <LayoutDashboard size={14} /> },
                 { name: 'Transações', icon: <ArrowRightLeft size={14} /> },
@@ -142,7 +150,7 @@ function App() {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 77, 0, 0.1)', borderColor: 'rgba(255, 77, 0, 0.3)' }}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5 text-[10px] md:text-xs font-bold text-white/60 hover:text-white transition-all cursor-default"
+                  className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white/5 border border-white/5 text-[9px] md:text-xs font-bold text-white/60 hover:text-white transition-all cursor-default"
                 >
                   <span className="text-vorix-orange">{item.icon}</span>
                   <span className="uppercase tracking-widest">{item.name}</span>
@@ -189,9 +197,9 @@ function App() {
 
 
 
-        <section id="features" className="py-24 px-6 relative">
+        <section id="features" className="py-16 md:py-32 px-6 relative">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 md:mb-20">
               <motion.span 
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -205,7 +213,7 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-3xl md:text-5xl font-bold mt-4"
+                className="text-3xl md:text-7xl font-bold mt-4 tracking-tighter"
               >
                 Engenharia de <span className="text-white/70">Alta Performance</span>
               </motion.h2>
@@ -227,15 +235,15 @@ function App() {
           </div>
         </section>
 
-        <section id="ai" className="py-24 px-6 md:py-32">
+        <section id="ai" className="py-16 md:py-32 px-6">
           <AIShowcase />
           
-          <div className="flex justify-center mt-24">
+          <div className="flex justify-center mt-12 md:mt-24">
             <a 
               href="https://vorix-project.vercel.app/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="premium-button premium-button-secondary flex items-center gap-3 text-lg md:text-xl px-10 py-5 font-bold uppercase"
+              className="premium-button premium-button-secondary flex items-center gap-3 text-base md:text-xl px-8 py-4 md:px-10 md:py-5 font-bold uppercase"
             >
                ELIMINAR GARGALOS TECNICAMENTE
                <ArrowRight size={20} />
@@ -243,16 +251,16 @@ function App() {
           </div>
         </section>
 
-        <section id="gamification" className="py-24 px-6 relative overflow-hidden">
+        <section id="gamification" className="py-16 md:py-32 px-6 relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-vorix-orange/10 blur-[120px] rounded-full pointer-events-none" />
           <Gamification />
         </section>
 
-        <section id="market" className="py-24 px-6">
+        <section id="market" className="py-16 md:py-32 px-6">
           <MarketRadar />
         </section>
 
-        <section className="py-24 md:py-48 px-4 sm:px-6">
+        <section className="py-16 md:py-48 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

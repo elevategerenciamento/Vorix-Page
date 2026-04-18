@@ -46,7 +46,13 @@ const MarketRadar = () => {
         {/* Remove update button as requested */}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+      {/* Mobile Swipe Indicator */}
+      <div className="md:hidden flex items-center justify-center gap-2 mb-8 text-white/40 text-[10px] font-black uppercase tracking-widest">
+         <span>Monitoramento em tempo real</span>
+         <Globe size={12} className="text-vorix-orange animate-pulse" />
+      </div>
+
+      <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 overflow-x-auto md:overflow-visible pb-10 md:pb-0 scrollbar-hide snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
         {markets.map((market, index) => (
           <motion.div
             key={market.name}
@@ -54,7 +60,7 @@ const MarketRadar = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="glass-card p-6 md:p-8 bg-vorix-card/40 border-white/5 group hover:border-white/10 transition-all"
+            className="flex-shrink-0 w-[80vw] md:w-auto snap-center glass-card p-6 md:p-8 bg-vorix-card/40 border-white/5 group hover:border-white/10 transition-all"
           >
             <div className="flex justify-between items-start mb-8 md:mb-10">
               <div className={`w-12 md:w-14 h-12 md:h-14 ${market.iconBg} ${market.iconColor} rounded-xl md:rounded-2xl flex items-center justify-center border border-current/10`}>

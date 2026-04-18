@@ -68,7 +68,7 @@ const Gamification = () => {
           ))}
         </div>
 
-        <div className="space-y-3 md:space-y-4">
+        <div className="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible pb-6 md:pb-0 scrollbar-hide snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
           {missions.map((mission, index) => (
             <motion.div
               key={mission.title}
@@ -76,32 +76,27 @@ const Gamification = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-vorix-accent/30 rounded-2xl md:rounded-3xl p-4 md:p-6 border border-white/5 hover:border-white/10 transition-colors"
+              className="flex-shrink-0 w-[80vw] md:w-auto snap-center bg-vorix-accent/30 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/5 hover:border-white/10 transition-colors flex flex-col justify-between"
             >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+              <div className="flex items-start md:items-center justify-between gap-4 mb-4">
                 <div className="flex items-center gap-4">
                   <div className="w-10 md:w-12 h-10 md:h-12 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center border border-white/10 flex-shrink-0">
                     {mission.icon}
                   </div>
                   <div>
-                    <h4 className={`font-bold text-base md:text-lg ${mission.completed ? 'text-green-500' : 'text-white'}`}>{mission.title}</h4>
-                    <p className="text-[10px] md:text-xs text-white/60 leading-tight">{mission.desc}</p>
+                    <h4 className={`font-bold text-sm md:text-lg ${mission.completed ? 'text-green-500' : 'text-white'}`}>{mission.title}</h4>
+                    <p className="text-[10px] md:text-xs text-white/60 leading-tight line-clamp-1 md:line-clamp-none">{mission.desc}</p>
                   </div>
                 </div>
-                <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center">
-                  <div className="sm:text-right">
-                    <p className="text-xs md:text-sm font-bold text-vorix-orange">{mission.points}</p>
-                    <p className="text-[9px] text-vorix-orange/50 font-bold uppercase tracking-widest leading-none">PONTOS</p>
-                  </div>
-                  {mission.completed && (
-                    <p className="text-[10px] text-green-500 font-bold uppercase tracking-widest sm:mt-1">✓ CONCLUÍDO</p>
-                  )}
+                <div className="flex flex-col items-end">
+                  <p className="text-xs md:text-sm font-bold text-vorix-orange">{mission.points}</p>
+                  <p className="text-[8px] md:text-[9px] text-vorix-orange/50 font-bold uppercase tracking-widest leading-none">PONTOS</p>
                 </div>
               </div>
 
-              {!mission.completed && (
+              {!mission.completed ? (
                 <div className="space-y-2">
-                  <div className="flex justify-between text-[10px] font-bold text-white/40 uppercase tracking-widest">
+                  <div className="flex justify-between text-[9px] md:text-[10px] font-bold text-white/40 uppercase tracking-widest">
                     <span>PROGRESSO</span>
                     <span className="tabular-nums">{mission.progress < 10 && mission.progress > 0 ? mission.progress + ' / 1000' : mission.progress === 66 ? '2 / 3' : '0 / 10000'}</span>
                   </div>
@@ -114,6 +109,11 @@ const Gamification = () => {
                       className={`h-full ${mission.progress > 50 ? 'bg-vorix-orange' : 'bg-vorix-orange/40'}`}
                     />
                   </div>
+                </div>
+              ) : (
+                <div className="flex items-center gap-2 mt-auto">
+                   <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                   <p className="text-[9px] md:text-[10px] text-green-500 font-bold uppercase tracking-widest">MISSÃO CONCLUÍDA</p>
                 </div>
               )}
             </motion.div>
