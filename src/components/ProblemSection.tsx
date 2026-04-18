@@ -43,20 +43,20 @@ const ProblemSection = () => {
             className="text-4xl md:text-8xl font-black mt-6 md:mt-10 tracking-tighter leading-[0.9] max-w-5xl mx-auto"
           >
             Enquanto você luta contra o caos, <br className="hidden md:block" />
-            <span className="text-white/20 italic">seu lucro escorre pelas mãos.</span>
+            <span className="text-white/40 italic">seu lucro escorre pelas mãos.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-white/40 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-medium"
+            className="text-white/60 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-medium"
           >
             Gerir sem inteligência técnica é como pilotar no escuro. Estes são os sintomas de quem ainda está preso ao passado.
           </motion.p>
         </div>
 
         {/* Mobile Swipe Indicator */}
-        <div className="md:hidden flex items-center justify-center gap-2 mb-6 text-white/20 text-[10px] font-black uppercase tracking-widest">
+        <div className="md:hidden flex items-center justify-center gap-2 mb-6 text-white/40 text-[10px] font-black uppercase tracking-widest">
            <span>Arraste para o lado</span>
            <ArrowRight size={12} className="animate-pulse" />
         </div>
@@ -76,7 +76,7 @@ const ProblemSection = () => {
                 {prob.icon}
               </div>
               <h3 className="text-2xl font-black mb-4 tracking-tight leading-tight uppercase">{prob.title}</h3>
-              <p className="text-white/30 text-base leading-relaxed">{prob.desc}</p>
+              <p className="text-white/50 text-base leading-relaxed">{prob.desc}</p>
               
               {/* Corner Accent */}
               <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-red-500/20 group-hover:bg-red-500 transition-colors" />

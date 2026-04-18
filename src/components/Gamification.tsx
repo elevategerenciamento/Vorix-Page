@@ -55,14 +55,14 @@ const Gamification = () => {
     <div className="max-w-4xl mx-auto px-4 md:px-6">
       <div className="text-center mb-12 md:mb-16">
         <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">Disciplina que <br className="md:hidden"/> <span className="text-vorix-orange">vira lucro</span></h2>
-        <p className="text-white/50 text-base md:text-xl max-w-2xl mx-auto">Não é sobre jogar. É sobre construir hábitos de alta performance. O Vorix usa psicologia comportamental para manter você no caminho da rentabilidade.</p>
+        <p className="text-white/70 text-base md:text-xl max-w-2xl mx-auto">Não é sobre jogar. É sobre construir hábitos de alta performance. O Vorix usa psicologia comportamental para manter você no caminho da rentabilidade.</p>
       </div>
 
       <div className="glass-card p-5 md:p-8 bg-vorix-card/40 border-white/5 space-y-4">
         {/* Header Tabs Mockup */}
         <div className="flex gap-2 md:gap-4 border-b border-white/5 pb-4 mb-6 md:mb-8 overflow-x-auto scrollbar-hide">
           {['Missões', 'Conquistas', 'Badges', 'Ranking'].map((tab, i) => (
-            <button key={tab} className={`px-3 py-1.5 md:px-4 md:py-2 rounded-lg md:rounded-xl text-[10px] md:text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all ${i === 0 ? 'bg-vorix-orange text-white' : 'text-white/40 hover:text-white/60'}`}>
+            <button key={tab} className={`px-3 py-1.5 md:px-4 md:py-2 rounded-lg md:rounded-xl text-[10px] md:text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all ${i === 0 ? 'bg-vorix-orange text-white' : 'text-white/50 hover:text-white/70'}`}>
               {tab}
             </button>
           ))}
@@ -85,7 +85,7 @@ const Gamification = () => {
                   </div>
                   <div>
                     <h4 className={`font-bold text-base md:text-lg ${mission.completed ? 'text-green-500' : 'text-white'}`}>{mission.title}</h4>
-                    <p className="text-[10px] md:text-xs text-white/40 leading-tight">{mission.desc}</p>
+                    <p className="text-[10px] md:text-xs text-white/60 leading-tight">{mission.desc}</p>
                   </div>
                 </div>
                 <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center">
@@ -101,7 +101,7 @@ const Gamification = () => {
 
               {!mission.completed && (
                 <div className="space-y-2">
-                  <div className="flex justify-between text-[10px] font-bold text-white/20 uppercase tracking-widest">
+                  <div className="flex justify-between text-[10px] font-bold text-white/40 uppercase tracking-widest">
                     <span>PROGRESSO</span>
                     <span className="tabular-nums">{mission.progress < 10 && mission.progress > 0 ? mission.progress + ' / 1000' : mission.progress === 66 ? '2 / 3' : '0 / 10000'}</span>
                   </div>

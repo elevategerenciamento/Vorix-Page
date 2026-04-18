@@ -41,7 +41,7 @@ const MarketRadar = () => {
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6 md:gap-8">
         <div className="text-center md:text-left">
           <h2 className="text-3xl md:text-6xl font-bold mb-3 md:mb-4 leading-tight">O mundo não para. <br className="md:hidden"/> <span className="text-vorix-orange">Seu sistema também não.</span></h2>
-          <p className="text-white/50 text-base md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed font-medium">O Radar Vorix monitora variações globais que impactam seu bolso em tempo real. Esteja sempre um passo à frente dos riscos e das oportunidades.</p>
+          <p className="text-white/70 text-base md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed font-medium">O Radar Vorix monitora variações globais que impactam seu bolso em tempo real. Esteja sempre um passo à frente dos riscos e das oportunidades.</p>
         </div>
         <a 
           href="https://vorix-project.vercel.app/" 
@@ -74,9 +74,9 @@ const MarketRadar = () => {
             </div>
 
             <div className="space-y-1">
-              <p className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">{market.name}</p>
+              <p className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">{market.name}</p>
               <h4 className="text-2xl md:text-3xl font-bold">{market.value}</h4>
-              <p className="text-[10px] md:text-xs text-white/20 font-medium">{market.ticker}</p>
+              <p className="text-[10px] md:text-xs text-white/40 font-medium">{market.ticker}</p>
             </div>
           </motion.div>
         ))}
@@ -90,12 +90,12 @@ const MarketRadar = () => {
         className="mt-8 md:mt-12 p-6 md:p-8 glass-card bg-vorix-card/20 border-white/5 flex flex-col md:flex-row items-center justify-between gap-6"
       >
         <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-4 md:gap-6">
-          <div className="w-12 md:w-16 h-12 md:h-16 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white/40">
+          <div className="w-12 md:w-16 h-12 md:h-16 bg-white/5 rounded-xl md:rounded-2xl flex items-center justify-center text-white/60">
             <RefreshCcw size={24} className="md:w-[32px] md:h-[32px]" />
           </div>
           <div>
             <h4 className="text-lg md:text-xl font-bold">Notícias de Hoje</h4>
-            <p className="text-xs md:text-sm text-white/30">Atualiza diariamente com notícias reais do ecossistema financeiro.</p>
+            <p className="text-xs md:text-sm text-white/50">Atualiza diariamente com notícias reais do ecossistema financeiro.</p>
           </div>
         </div>
         <a 

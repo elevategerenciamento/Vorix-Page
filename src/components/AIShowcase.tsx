@@ -16,9 +16,9 @@ const AIShowcase = () => {
           VORIX INTELLIGENCE
         </motion.div>
         <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tighter">
-          Seu consultor técnico, <span className="text-white/40">na velocidade do agora.</span>
+          Seu consultor técnico, <span className="text-white/60">na velocidade do agora.</span>
         </h2>
-        <p className="text-base md:text-xl text-white/50 mb-8 md:mb-10 leading-relaxed font-medium">
+        <p className="text-base md:text-xl text-white/70 mb-8 md:mb-10 leading-relaxed font-medium">
           A I.A. Vorix não é um chat externo ou um bot genérico. Ela vive <strong>dentro do seu dashboard</strong>, processando cada centavo que entra e sai da sua conta em tempo real. É o seu consultor técnico que nunca dorme, focado em apontar falhas antes que elas aconteçam.
         </p>
 
@@ -33,7 +33,7 @@ const AIShowcase = () => {
               </div>
               <div>
                 <h4 className="font-bold text-base">{item.title}</h4>
-                <p className="text-white/40 text-[11px] leading-tight">{item.desc}</p>
+                <p className="text-white/60 text-[11px] leading-tight">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -96,8 +96,8 @@ const AIShowcase = () => {
                   Déficit mensal: <span className="text-vorix-orange font-bold">R$ 849,00</span>.
                 </p>
                 <div className="mt-4 pt-4 border-t border-white/5">
-                   <p className="text-[10px] font-bold text-white/40 uppercase mb-2">Ação Sugerida:</p>
-                   <p className="text-xs text-white/70 tracking-tight">• Cortar 40% dos custos em Alimentação.</p>
+                   <p className="text-[10px] font-bold text-white/60 uppercase mb-2">Ação Sugerida:</p>
+                   <p className="text-xs text-white/80 tracking-tight">• Cortar 40% dos custos em Alimentação.</p>
                 </div>
               </div>
             </div>
@@ -106,7 +106,7 @@ const AIShowcase = () => {
           {/* Input Area */}
           <div className="p-6 bg-vorix-black/50 border-t border-white/5">
             <div className="bg-white/5 rounded-2xl p-4 flex items-center gap-4">
-              <input readOnly placeholder="Pergunte algo..." className="bg-transparent border-none outline-none text-sm flex-1 text-white/30" />
+              <input readOnly placeholder="Pergunte algo..." className="bg-transparent border-none outline-none text-sm flex-1 text-white/50" />
               <button className="w-10 h-10 bg-vorix-orange rounded-xl flex items-center justify-center"><Send size={18} /></button>
             </div>
           </div>

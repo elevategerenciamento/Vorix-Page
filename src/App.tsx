@@ -59,13 +59,13 @@ function App() {
               className="text-3xl md:text-5xl font-bold mb-8 leading-tight"
             >
               Não é apenas um dashboard. <br/>
-              <span className="text-white/30">É a inteligência por trás do seu lucro.</span>
+              <span className="text-white/50">É a inteligência por trás do seu lucro.</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-base md:text-xl text-white/50 leading-relaxed"
+              className="text-base md:text-xl text-white/70 leading-relaxed"
             >
               Criamos o Vorix para quem cansou de ferramentas amadoras que apenas listam dados. 
               Nossa missão é transformar números frios em decisões estratégicas automáticas. 
@@ -92,7 +92,7 @@ function App() {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 77, 0, 0.1)', borderColor: 'rgba(255, 77, 0, 0.3)' }}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5 text-[10px] md:text-xs font-bold text-white/40 hover:text-white transition-all cursor-default"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5 text-[10px] md:text-xs font-bold text-white/60 hover:text-white transition-all cursor-default"
                 >
                   <span className="text-vorix-orange">{item.icon}</span>
                   <span className="uppercase tracking-widest">{item.name}</span>
@@ -123,7 +123,7 @@ function App() {
                <span className="text-2xl md:text-5xl font-black tracking-tight uppercase leading-none mb-4 group-hover:translate-x-1 transition-transform">
                  Quero transformar <br className="hidden md:block"/> minha gestão agora
                </span>
-               <div className="flex items-center gap-2 text-[10px] md:text-xs font-black text-white/40 tracking-[0.4em] uppercase">
+               <div className="flex items-center gap-2 text-[10px] md:text-xs font-black text-white/60 tracking-[0.4em] uppercase">
                  <Zap size={12} className="text-vorix-orange" /> Acesso imediato ao ecossistema
                </div>
              </div>
@@ -157,7 +157,7 @@ function App() {
                 transition={{ delay: 0.1 }}
                 className="text-3xl md:text-5xl font-bold mt-4"
               >
-                Engenharia de <span className="text-white/60">Alta Performance</span>
+                Engenharia de <span className="text-white/70">Alta Performance</span>
               </motion.h2>
             </div>
             
@@ -215,7 +215,7 @@ function App() {
                 A Revolução <br className="hidden md:block" />
                 <span className="text-vorix-orange">Começa Aqui.</span>
               </h2>
-              <p className="text-white/40 text-lg md:text-3xl mb-12 md:mb-16 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-white/60 text-lg md:text-3xl mb-12 md:mb-16 max-w-2xl mx-auto leading-relaxed">
                 Não perca mais tempo com ferramentas que não entregam resultados. 
                 O Vorix é a evolução que sua operação precisa.
               </p>
@@ -228,7 +228,7 @@ function App() {
                 Entrar no Ecossistema Vorix
                 <ArrowRight size={24} className="md:w-[28px] md:h-[28px]" />
               </a>
-             <p className="mt-8 text-[10px] md:text-sm text-white/20 font-bold uppercase tracking-[0.3em]">Acesso imediato • Interface 100% Mobile-First</p>
+             <p className="mt-8 text-[10px] md:text-sm text-white/40 font-bold uppercase tracking-[0.3em]">Acesso imediato • Interface 100% Mobile-First</p>
             </motion.div>
           </div>
         </section>

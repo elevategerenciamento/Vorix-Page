@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="w-6 h-6 bg-vorix-orange rounded-md flex items-center justify-center">
             <TrendingUp size={14} className="text-white" />
           </div>
-          <span className="text-xs md:text-sm font-bold text-white/80 uppercase tracking-widest">
+          <span className="text-[10px] md:text-sm font-bold text-white/90 uppercase tracking-widest">
             A EVOLUÇÃO DA GESTÃO MODERNA
           </span>
           <span className="w-2 h-2 rounded-full bg-vorix-orange animate-pulse" />
@@ -44,7 +44,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-2xl text-white/50 max-w-3xl mx-auto mb-12 leading-relaxed font-medium px-4"
+          className="text-lg md:text-2xl text-white/70 max-w-3xl mx-auto mb-12 leading-relaxed font-medium px-4"
         >
           O Vorix é o cérebro que sua operação merece. Deixamos de lado a complexidade e entregamos <span className="text-white">clareza absoluta</span> para você focar no que realmente importa: crescer.
         </motion.p>
@@ -121,74 +121,82 @@ const Hero = () => {
               exit={{ scale: 0.9, y: 40 }}
               className="w-full max-w-4xl bg-[#0A0A0A] border border-white/10 rounded-[2.5rem] md:rounded-[4rem] overflow-hidden relative shadow-[0_0_100px_rgba(255,77,0,0.1)]"
             >
-              <button 
-                onClick={() => setShowHowItWorks(false)}
-                className="absolute top-8 right-8 w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white/40 hover:text-white hover:bg-vorix-orange transition-all z-10"
-              >
-                <X size={24} />
-              </button>
+                <button 
+                  onClick={() => setShowHowItWorks(false)}
+                  className="absolute top-4 right-4 md:top-8 md:right-8 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 flex items-center justify-center text-white/40 hover:text-white hover:bg-vorix-orange transition-all z-[210]"
+                >
+                  <X size={20} />
+                </button>
 
-              <div className="flex flex-col md:flex-row h-full max-h-[90vh] overflow-y-auto">
-                {/* Left side / Intro */}
-                <div className="p-10 md:p-16 flex-1 border-b md:border-b-0 md:border-r border-white/5 space-y-10">
-                   <div className="space-y-4">
-                     <span className="text-vorix-orange font-black text-xs md:text-sm uppercase tracking-[0.4em]">O DNA DO SISTEMA</span>
-                     <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight italic">
-                        SIMPLES. <br/>
-                        PRECISO. <br/>
-                        <span className="text-vorix-orange">LUCRATIVO.</span>
-                     </h2>
-                   </div>
-                   
-                   <p className="text-white/40 text-lg md:text-xl leading-relaxed">
-                     O Vorix foi construído sob uma base de <strong>linguagem clara</strong>. Chega de planilhas complexas que ninguém entende. Nós traduzimos sua operação em poder de decisão real.
-                   </p>
+                <div className="flex flex-col md:flex-row h-full max-h-[85vh] overflow-y-auto overflow-x-hidden pt-12 md:pt-0">
+                  {/* Left side / Intro - Hidden on very small mobile for speed */}
+                  <div className="p-8 md:p-16 flex-1 border-b md:border-b-0 md:border-r border-white/5 space-y-6 md:space-y-10">
+                     <div className="space-y-3">
+                       <span className="text-vorix-orange font-black text-[10px] md:text-sm uppercase tracking-[0.4em]">O DNA DO SISTEMA</span>
+                       <h2 className="text-3xl md:text-6xl font-black tracking-tighter leading-tight italic">
+                          SIMPLES. <br className="hidden md:block"/>
+                          PRECISO. <br className="hidden md:block"/>
+                          <span className="text-vorix-orange whitespace-nowrap">LUCRATIVO.</span>
+                       </h2>
+                     </div>
+                     
+                     <p className="text-white/60 text-base md:text-xl leading-relaxed">
+                       O Vorix traduz sua operação em poder de decisão real, removendo a confusão de planilhas complexas.
+                     </p>
 
-                   <div className="grid grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <CheckCircle2 className="text-emerald-500" size={24} />
-                        <p className="text-xs font-bold text-white/60">Configuração em 60s</p>
-                      </div>
-                      <div className="space-y-2">
-                        <Zap className="text-vorix-orange" size={24} />
-                        <p className="text-xs font-bold text-white/60">Decisões 10x rápidas</p>
-                      </div>
-                   </div>
-                </div>
-
-                {/* Right side / Journey */}
-                <div className="p-10 md:p-16 flex-1 bg-white/[0.01] space-y-10">
-                   <h3 className="text-xl font-bold mb-8">Como vai mudar sua vida:</h3>
-                   
-                   {[
-                     { title: "Identificação", desc: "O sistema mapeia seus hábitos financeiros e encontra os gargalos de prejuízo que você nem sabia que existiam.", icon: <Globe size={20}/> },
-                     { title: "Direção Técnica", desc: "A IA integrada sugere exatamente onde cortar e onde investir para maximizar seu lucro diário.", icon: <Layers size={20}/> },
-                     { title: "Liberdade Real", desc: "Menos tempo olhando dados, mais tempo vivendo. O Vorix faz o trabalho sujo por você.", icon: <ArrowRight size={20}/> }
-                   ].map((step, i) => (
-                     <div key={i} className="flex gap-6 items-start group">
-                        <div className="w-12 h-12 rounded-2xl bg-vorix-orange/10 flex items-center justify-center text-vorix-orange flex-shrink-0 group-hover:scale-110 transition-transform">
-                          {step.icon}
+                     <div className="grid grid-cols-2 gap-4 md:gap-6">
+                        <div className="space-y-2">
+                          <CheckCircle2 className="text-emerald-500" size={20} />
+                          <p className="text-[10px] font-bold text-white/80">Setup em 60s</p>
                         </div>
-                        <div>
-                           <h4 className="font-bold text-lg mb-1">{step.title}</h4>
-                           <p className="text-white/30 text-sm leading-relaxed">{step.desc}</p>
+                        <div className="space-y-2">
+                          <Zap className="text-vorix-orange" size={20} />
+                          <p className="text-[10px] font-bold text-white/80">Decisões Rápidas</p>
                         </div>
                      </div>
-                   ))}
+                  </div>
 
-                   <div className="pt-8">
-                     <a 
-                       href="https://vorix-project.vercel.app/" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       className="premium-button premium-button-primary w-full py-6 flex items-center justify-center gap-3 text-xl font-black"
-                     >
-                       ENTRAR AGORA
-                       <ArrowRight size={20} />
-                     </a>
-                   </div>
+                  {/* Right side / Journey */}
+                  <div className="p-8 md:p-16 flex-1 bg-white/[0.02] space-y-8 md:space-y-10">
+                     <h3 className="text-lg md:text-xl font-bold">Jornada Vorix:</h3>
+                     
+                     <div className="space-y-6">
+                       {[
+                         { title: "Identificação", desc: "Mapeamos gargalos de prejuízo invisíveis.", icon: <Globe size={18}/> },
+                         { title: "Direção Técnica", desc: "IA sugere onde cortar e onde investir.", icon: <Layers size={18}/> },
+                         { title: "Liberdade", desc: "O sistema faz o trabalho sujo por você.", icon: <ArrowRight size={18}/> }
+                       ].map((step, i) => (
+                         <div key={i} className="flex gap-4 items-start group">
+                            <div className="w-10 h-10 rounded-xl bg-vorix-orange/10 flex items-center justify-center text-vorix-orange flex-shrink-0 group-hover:scale-110 transition-transform">
+                              {step.icon}
+                            </div>
+                            <div>
+                               <h4 className="font-bold text-base mb-1">{step.title}</h4>
+                               <p className="text-white/60 text-xs md:text-sm leading-relaxed">{step.desc}</p>
+                            </div>
+                         </div>
+                       ))}
+                     </div>
+
+                     <div className="pt-4">
+                       <a 
+                         href="https://vorix-project.vercel.app/" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         className="premium-button premium-button-primary w-full py-5 flex items-center justify-center gap-3 text-lg font-black"
+                       >
+                         ENTRAR AGORA
+                         <ArrowRight size={20} />
+                       </a>
+                       <button 
+                         onClick={() => setShowHowItWorks(false)}
+                         className="w-full mt-4 text-[10px] uppercase tracking-widest text-white/30 hover:text-white/60 transition-colors"
+                       >
+                         FECHAR ESSE PAINEL
+                       </button>
+                     </div>
+                  </div>
                 </div>
-              </div>
             </motion.div>
           </motion.div>
         )}
