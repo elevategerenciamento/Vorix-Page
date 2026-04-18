@@ -8,6 +8,7 @@ import Features from './components/Features';
 import AIShowcase from './components/AIShowcase';
 import Gamification from './components/Gamification';
 import MarketRadar from './components/MarketRadar';
+import ReportSection from './components/ReportSection';
 import ProblemSection from './components/ProblemSection';
 import Footer from './components/Footer';
 import { 
@@ -253,6 +254,8 @@ function App() {
         <section id="market" className="py-16 md:py-32 px-6">
           <MarketRadar />
         </section>
+
+        <ReportSection />
 
         <section className="py-16 md:py-48 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto text-center">
