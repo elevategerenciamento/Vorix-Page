@@ -19,7 +19,7 @@ const Hero = () => {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8"
         >
           <div className="w-2 h-2 rounded-full bg-vorix-orange animate-pulse" />
-          <span className="text-[10px] md:text-xs font-black tracking-[0.2em] uppercase text-white/60">SISTEMA DE GESTÃO INTELIGENTE</span>
+          <span className="text-[10px] md:text-xs font-black tracking-[0.2em] uppercase text-white/80">SISTEMA DE GESTÃO INTELIGENTE</span>
         </motion.div>
 
         <motion.h1
@@ -117,7 +117,7 @@ const Hero = () => {
             >
                 <button 
                   onClick={() => setShowHowItWorks(false)}
-                  className="absolute top-4 right-4 md:top-8 md:right-8 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 flex items-center justify-center text-white/40 hover:text-white hover:bg-vorix-orange transition-all z-[210]"
+                  className="absolute top-4 right-4 md:top-8 md:right-8 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/5 flex items-center justify-center text-white/70 hover:text-white hover:bg-vorix-orange transition-all z-[210]"
                 >
                   <X size={20} />
                 </button>
@@ -134,7 +134,7 @@ const Hero = () => {
                        </h2>
                      </div>
                      
-                     <p className="text-white/60 text-base md:text-xl leading-relaxed">
+                     <p className="text-white/80 text-base md:text-xl leading-relaxed">
                        O Vorix traduz sua operação em poder de decisão real, removendo a confusão de planilhas complexas.
                      </p>
 
@@ -166,7 +166,7 @@ const Hero = () => {
                             </div>
                             <div>
                                <h4 className="font-bold text-base mb-1">{step.title}</h4>
-                               <p className="text-white/60 text-xs md:text-sm leading-relaxed">{step.desc}</p>
+                               <p className="text-white/80 text-xs md:text-sm leading-relaxed">{step.desc}</p>
                             </div>
                          </div>
                        ))}

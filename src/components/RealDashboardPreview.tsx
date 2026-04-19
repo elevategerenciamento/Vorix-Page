@@ -21,7 +21,7 @@ const RealDashboardPreview = () => {
       {/* Top Status Bar Mockup */}
       <div className="pt-10 px-6 flex justify-between items-center text-[10px] font-bold tracking-tight">
         <div className="flex gap-2">
-          <span className="bg-white/5 px-2.5 py-1 rounded text-white/40 border border-white/5 uppercase">NÍVEL 17</span>
+          <span className="bg-white/5 px-2.5 py-1 rounded text-white/70 border border-white/5 uppercase">NÍVEL 17</span>
           <span className="bg-emerald-500/10 px-2.5 py-1 rounded text-emerald-500 border border-emerald-500/10 uppercase">★ PREMIUM</span>
         </div>
         <div className="flex items-center gap-1.5 text-vorix-orange">
@@ -37,7 +37,7 @@ const RealDashboardPreview = () => {
             <Menu size={24} className="text-white/60" />
           </div>
           <div>
-            <p className="text-[11px] text-white/30 font-bold uppercase tracking-widest leading-none mb-1.5">OLÁ,</p>
+            <p className="text-[11px] text-white/60 font-bold uppercase tracking-widest leading-none mb-1.5">OLÁ,</p>
             <h3 className="text-base font-bold">Oliveira</h3>
           </div>
         </div>
@@ -52,10 +52,10 @@ const RealDashboardPreview = () => {
       <div className="px-6 space-y-5 h-[calc(100%-160px)] overflow-y-auto scrollbar-hide pb-28">
         <div>
           <h1 className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 tracking-tight">Dashboard</h1>
-          <p className="text-xs text-white/30 mt-1.5 font-medium">Bem-vindo de volta ao seu centro de comando financeiro.</p>
+          <p className="text-xs text-white/60 mt-1.5 font-medium">Bem-vindo de volta ao seu centro de comando financeiro.</p>
         </div>
 
-        <button className="w-full py-4 bg-white/5 rounded-2xl border border-white/5 flex items-center justify-center gap-2.5 text-xs font-bold text-white/60 hover:bg-white/10 transition-colors uppercase tracking-[0.15em]">
+        <button className="w-full py-4 bg-white/5 rounded-2xl border border-white/5 flex items-center justify-center gap-2.5 text-xs font-bold text-white/90 hover:bg-white/10 transition-colors uppercase tracking-[0.15em]">
           <FileText size={16} />
           Exportar Relatório (PDF)
         </button>
@@ -65,7 +65,7 @@ const RealDashboardPreview = () => {
           {/* Saldo Total */}
           <div className="p-5 bg-[#0A0A0A] rounded-[2rem] border border-white/5 flex items-center justify-between group hover:border-vorix-orange/30 transition-all cursor-pointer">
             <div>
-              <p className="text-[10px] text-white/30 font-bold uppercase tracking-widest mb-1.5">Saldo Total</p>
+              <p className="text-[10px] text-white/60 font-bold uppercase tracking-widest mb-1.5">Saldo Total</p>
               <h4 className="text-xl font-bold">R$ 6.450,00</h4>
             </div>
             <div className="w-12 h-12 bg-vorix-orange/10 rounded-2xl flex items-center justify-center text-vorix-orange border border-vorix-orange/10">
@@ -76,7 +76,7 @@ const RealDashboardPreview = () => {
           {/* Entradas */}
           <div className="p-5 bg-[#0A0A0A] rounded-[2rem] border border-white/5 flex items-center justify-between">
             <div>
-              <p className="text-[10px] text-white/30 font-bold uppercase tracking-widest mb-1.5">Entradas (Mês)</p>
+              <p className="text-[10px] text-white/60 font-bold uppercase tracking-widest mb-1.5">Entradas (Mês)</p>
               <div className="flex items-center gap-2.5">
                 <h4 className="text-xl font-bold text-emerald-500 font-mono">R$ 83,00</h4>
                 <span className="text-[10px] px-1.5 py-0.5 bg-emerald-500/10 text-emerald-500 rounded-md font-black">↑ 12%</span>
@@ -90,7 +90,7 @@ const RealDashboardPreview = () => {
           {/* Saídas */}
           <div className="p-5 bg-[#0A0A0A] rounded-[2rem] border border-white/5 flex items-center justify-between">
             <div>
-              <p className="text-[10px] text-white/30 font-bold uppercase tracking-widest mb-1.5">Saídas (Mês)</p>
+              <p className="text-[10px] text-white/60 font-bold uppercase tracking-widest mb-1.5">Saídas (Mês)</p>
               <div className="flex items-center gap-2.5">
                 <h4 className="text-xl font-bold text-red-500 font-mono">R$ 932,00</h4>
                 <span className="text-[10px] px-1.5 py-0.5 bg-red-500/10 text-red-500 rounded-md font-black">↓ 5%</span>
@@ -103,7 +103,7 @@ const RealDashboardPreview = () => {
 
           {/* Chart Section - More Realistic Wave */}
           <div className="p-6 bg-[#0A0A0A] rounded-[2rem] border border-white/5">
-            <h5 className="text-[11px] font-bold mb-6 uppercase tracking-[0.2em] text-white/40">Fluxo de Caixa</h5>
+            <h5 className="text-[11px] font-bold mb-6 uppercase tracking-[0.2em] text-white/70">Fluxo de Caixa</h5>
             <div className="h-40 relative flex items-end">
               <div className="absolute inset-0 border-b border-white/5 flex flex-col justify-between pt-2">
                  {[1,2,3,4].map(i => <div key={i} className="w-full border-t border-white/[0.03]" />)}
@@ -136,14 +136,14 @@ const RealDashboardPreview = () => {
                 />
               </svg>
             </div>
-            <div className="flex justify-between mt-5 text-[8px] font-black text-white/20 uppercase tracking-widest px-1">
+            <div className="flex justify-between mt-5 text-[8px] font-black text-white/50 uppercase tracking-widest px-1">
                <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sab</span><span>Dom</span>
             </div>
           </div>
 
            {/* Distribution - The part starting below */}
            <div className="p-6 bg-[#0A0A0A] rounded-[2rem] border border-white/5">
-            <h5 className="text-[11px] font-bold mb-6 uppercase tracking-[0.2em] text-white/40">Distribuição de Despesas</h5>
+            <h5 className="text-[11px] font-bold mb-6 uppercase tracking-[0.2em] text-white/70">Distribuição de Despesas</h5>
             <div className="flex items-center gap-6">
                <div className="relative w-20 h-20">
                  <div className="absolute inset-0 rounded-full border-[6px] border-vorix-orange/80 border-t-emerald-500 border-l-purple-500" />
@@ -154,11 +154,11 @@ const RealDashboardPreview = () => {
                <div className="flex-1 space-y-2">
                  <div className="flex items-center justify-between text-[8px] font-bold uppercase tracking-widest">
                    <div className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-vorix-orange" /> <span>Lazer</span></div>
-                   <span className="text-white/40">45%</span>
+                   <span className="text-white/70">45%</span>
                  </div>
                  <div className="flex items-center justify-between text-[8px] font-bold uppercase tracking-widest">
                    <div className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> <span>Comida</span></div>
-                   <span className="text-white/40">30%</span>
+                   <span className="text-white/70">30%</span>
                  </div>
                </div>
             </div>

@@ -49,7 +49,7 @@ const ProblemSection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-white/60 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-medium"
+            className="text-white/80 text-lg md:text-2xl mt-8 md:mt-12 max-w-3xl mx-auto leading-relaxed font-medium"
           >
             A falta de clareza custa caro. Sem o controle real dos seus números, decisões importantes acabam virando apenas palpites arriscados.
           </motion.p>
@@ -70,7 +70,7 @@ const ProblemSection = () => {
                   <div className="scale-75 md:scale-100">{prob.icon}</div>
                 </div>
                 <h3 className="text-xs md:text-2xl font-black mb-2 md:mb-4 tracking-tight leading-tight uppercase">{prob.title}</h3>
-                <p className="text-white/40 text-[9px] md:text-base leading-relaxed md:text-white/50">{prob.desc}</p>
+                <p className="text-white/70 text-[9px] md:text-base leading-relaxed md:text-white/80">{prob.desc}</p>
               </div>
               
               {/* Corner Accent */}

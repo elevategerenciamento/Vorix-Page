@@ -6,7 +6,7 @@ const DashboardPreview = () => {
     <div className="max-w-4xl mx-auto px-4 md:px-0">
       <div className="text-center mb-16 px-4">
         <h2 className="text-3xl md:text-5xl font-bold mb-4">Onde o controle encontra a <span className="text-vorix-orange">conveniência.</span></h2>
-        <p className="text-white/50 text-base md:text-xl max-w-2xl mx-auto">Desenhado para quem decide rápido. Tenha o controle total da sua operação na palma da mão, com uma interface que economiza seu tempo e sua energia cognitiva.</p>
+        <p className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">Desenhado para quem decide rápido. Tenha o controle total da sua operação na palma da mão, com uma interface que economiza seu tempo e sua energia cognitiva.</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -22,7 +22,7 @@ const DashboardPreview = () => {
             <div className="relative w-48 h-48 mx-auto flex items-center justify-center">
               <div className="absolute inset-0 rounded-full border-[15px] border-vorix-orange border-t-blue-500 border-l-emerald-500 border-b-purple-500 opacity-90" />
               <div className="text-center">
-                <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest leading-none">TOTAL</p>
+                <p className="text-[10px] text-white/70 font-bold uppercase tracking-widest leading-none mb-1">TOTAL</p>
                 <p className="text-2xl font-bold">R$ 932,00</p>
               </div>
             </div>
@@ -37,7 +37,7 @@ const DashboardPreview = () => {
                ].map(item => (
                  <div key={item.label} className="flex items-center gap-2">
                    <div className={`w-2 h-2 rounded-full ${item.color}`} />
-                   <span className="text-[10px] font-bold text-white/40 tracking-wider">{item.label}</span>
+                   <span className="text-[10px] font-bold text-white/70 tracking-wider">{item.label}</span>
                  </div>
                ))}
             </div>
@@ -57,7 +57,7 @@ const DashboardPreview = () => {
                       </div>
                       <div>
                         <p className="font-bold text-sm">{t.title}</p>
-                        <p className="text-[10px] text-white/30 font-bold">{t.cat} • {t.date}</p>
+                        <p className="text-[10px] text-white/60 font-bold">{t.cat} • {t.date}</p>
                       </div>
                     </div>
                     <p className={`font-bold text-sm ${t.pos ? 'text-emerald-500' : 'text-red-500'}`}>{t.val}</p>
@@ -82,7 +82,7 @@ const DashboardPreview = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Notícias de Hoje</h3>
-                <p className="text-[10px] text-white/30">Atualiza diariamente com notícias reais</p>
+                <p className="text-[10px] text-white/60">Atualiza diariamente com notícias reais</p>
               </div>
             </div>
 
@@ -90,12 +90,12 @@ const DashboardPreview = () => {
               <div className="bg-white/5 p-5 rounded-3xl border border-white/5">
                 <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full">BOLSA</span>
                 <h4 className="font-bold mt-4 leading-snug">Bolsa bate recorde e encosta nos 200 mil pontos...</h4>
-                <p className="text-[10px] text-white/30 mt-2">Fonte: CNN Brasil</p>
+                <p className="text-[10px] text-white/60 mt-2">Fonte: CNN Brasil</p>
               </div>
               <div className="bg-white/5 p-5 rounded-3xl border border-white/5">
                 <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full">CÂMBIO</span>
                 <h4 className="font-bold mt-4 leading-snug">Dólar se mantém abaixo de R$ 5 com petróleo estável</h4>
-                <p className="text-[10px] text-white/30 mt-2">Fonte: GZH</p>
+                <p className="text-[10px] text-white/60 mt-2">Fonte: GZH</p>
               </div>
             </div>
 
@@ -111,7 +111,7 @@ const DashboardPreview = () => {
                   <span className="text-[10px] font-bold text-emerald-500 uppercase">BAIXO RISCO</span>
                 </div>
                 <h4 className="font-bold">Tesouro IPCA+ 2035</h4>
-                <p className="text-xs text-white/50 mt-2 font-medium">Proteção contra inflação com rentabilidade real atrativa.</p>
+                <p className="text-xs text-white/80 mt-2 font-medium">Proteção contra inflação com rentabilidade real atrativa.</p>
               </div>
             </div>
           </div>

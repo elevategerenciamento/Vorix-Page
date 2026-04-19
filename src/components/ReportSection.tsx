@@ -36,7 +36,7 @@ const ReportSection = () => {
                 <span className="text-white/40">Palma da Mão.</span>
               </h2>
               
-              <p className="text-white/60 text-lg md:text-2xl mb-12 leading-relaxed max-w-xl">
+              <p className="text-white/80 text-lg md:text-2xl mb-12 leading-relaxed max-w-xl">
                 Gere relatórios técnicos e personalizados com total liberdade. 
                 Escolha o período, exporte em PDF para o WhatsApp e tenha o raio-x absoluto da sua lucratividade.
               </p>
@@ -72,7 +72,7 @@ const ReportSection = () => {
                     </div>
                     <div>
                       <h3 className="text-base md:text-xl font-bold mb-1 uppercase tracking-tight">{item.title}</h3>
-                      <p className="text-white/40 text-sm md:text-base">{item.desc}</p>
+                      <p className="text-white/70 text-sm md:text-base">{item.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -113,11 +113,11 @@ const ReportSection = () => {
                 <div className="bg-[#050505] text-white p-5 md:p-8 flex justify-between items-start border-b border-white/10">
                   <div>
                     <div className="text-vorix-orange font-black text-2xl md:text-3xl tracking-tighter mb-1">VORIX</div>
-                    <div className="text-[7px] md:text-[9px] text-white/50 uppercase tracking-[0.3em] font-medium transition-all group-hover:tracking-[0.4em] duration-1000">Centro de Comando Financeiro</div>
+                    <div className="text-[7px] md:text-[9px] text-white/70 uppercase tracking-[0.3em] font-medium transition-all group-hover:tracking-[0.4em] duration-1000">Centro de Comando Financeiro</div>
                   </div>
                   <div className="text-right">
                     <div className="text-[9px] md:text-[11px] font-black uppercase tracking-widest mb-1.5">Relatório de Movimentações</div>
-                    <div className="text-[7px] md:text-[9px] text-white/40 font-medium">Gerado em: 18/04/2026, 12:32:25</div>
+                    <div className="text-[7px] md:text-[9px] text-white/70 font-medium">Gerado em: 18/04/2026, 12:32:25</div>
                   </div>
                 </div>
 
@@ -173,10 +173,10 @@ const ReportSection = () => {
                           { data: "11/04/2026", desc: "Compras supermercado", conta: "Nubank", cat: "Alimentação", tipo: "SAÍDA", valor: "- R$ 381,00", isPositive: false },
                         ].map((row, i) => (
                           <tr key={i} className={`border-b border-gray-100 ${row.bg || ''}`}>
-                            <td className="p-2 text-[7px] md:text-[9px] font-medium text-black/60">{row.data}</td>
+                            <td className="p-2 text-[7px] md:text-[9px] font-medium text-black/80">{row.data}</td>
                             <td className="p-2 text-[7px] md:text-[9px] font-bold text-black/80">{row.desc}</td>
-                            <td className="p-2 text-[7px] md:text-[9px] font-medium text-black/60">{row.conta}</td>
-                            <td className="p-2 text-[7px] md:text-[9px] font-medium text-black/60">{row.cat}</td>
+                            <td className="p-2 text-[7px] md:text-[9px] font-medium text-black/80">{row.conta}</td>
+                            <td className="p-2 text-[7px] md:text-[9px] font-medium text-black/80">{row.cat}</td>
                             <td className={`p-2 text-[7px] md:text-[9px] font-bold ${row.isPositive ? 'text-vorix-orange' : 'text-black'}`}>{row.tipo}</td>
                             <td className={`p-2 text-[7px] md:text-[9px] font-black text-right ${row.isPositive ? 'text-vorix-orange' : 'text-black'}`}>{row.valor}</td>
                           </tr>
