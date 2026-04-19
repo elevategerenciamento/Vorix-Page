@@ -66,7 +66,7 @@ function App() {
                   <Target size={24} className="md:w-8 md:h-8" />
                 </div>
                 <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4 uppercase tracking-wider">O que é?</h3>
-                <p className="text-white/40 text-[10px] md:text-base leading-relaxed md:text-white/60">
+                <p className="text-white/90 text-sm md:text-lg leading-relaxed">
                   Um ecossistema digital inteligente que centraliza toda a gestão do seu negócio em um único lugar.
                 </p>
               </motion.div>
@@ -82,8 +82,8 @@ function App() {
                   <Zap size={24} className="md:w-8 md:h-8" />
                 </div>
                 <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4 uppercase tracking-wider">Para que?</h3>
-                <p className="text-white/40 text-[10px] md:text-base leading-relaxed md:text-white/60">
-                  Eliminar a confusão mental e estancar prejuízos.
+                <p className="text-white/90 text-sm md:text-lg leading-relaxed">
+                  Eliminar a confusão mental e estancar prejuízos reais do seu caixa.
                 </p>
               </motion.div>
 
@@ -98,8 +98,8 @@ function App() {
                   <Cpu size={24} className="md:w-8 md:h-8" />
                 </div>
                 <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4 uppercase tracking-wider">Como?</h3>
-                <p className="text-white/40 text-[10px] md:text-base leading-relaxed md:text-white/60">
-                  Processamento de dados em tempo real.
+                <p className="text-white/90 text-sm md:text-lg leading-relaxed">
+                  Através do processamento de dados técnico e automático em tempo real.
                 </p>
               </motion.div>
             </div>

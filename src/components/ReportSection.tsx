@@ -199,23 +199,6 @@ const ReportSection = () => {
                 </div>
               </div>
 
-              {/* Float Icons Around */}
-              <motion.div 
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-10 -right-8 w-16 h-16 md:w-20 md:h-20 bg-green-500 rounded-2xl shadow-2xl flex items-center justify-center text-white z-20"
-              >
-                <MessageCircle size={32} className="md:w-10 md:h-10" />
-              </motion.div>
-
-              <motion.div 
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-10 -left-8 w-16 h-16 md:w-20 md:h-20 bg-vorix-orange rounded-2xl shadow-2xl flex items-center justify-center text-white z-20"
-              >
-                <FileDown size={32} className="md:w-10 md:h-10" />
-              </motion.div>
-
               <motion.div 
                 animate={{ x: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}

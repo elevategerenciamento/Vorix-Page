@@ -18,8 +18,8 @@ const AIShowcase = () => {
         <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tighter">
           Seu consultor técnico, <span className="text-white/60">na velocidade do agora.</span>
         </h2>
-        <p className="text-base md:text-xl text-white/70 mb-8 md:mb-10 leading-relaxed font-bold uppercase tracking-tight">
-          A Tecnologia Vorix não é um bot de conversa. É uma <strong>unidade de processamento técnico</strong> que vive no seu caixa, cortando gargalos de prejuízo em tempo real.
+        <p className="text-base md:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed font-bold uppercase tracking-tight">
+          A IA VORIX é o cérebro do seu negócio. Ela analisa seus números em tempo real e indica exatamente onde você está perdendo dinheiro e como lucrar mais.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-6 text-left">
@@ -67,7 +67,7 @@ const AIShowcase = () => {
                 <Bot className="text-white" size={24} />
               </div>
               <div>
-                <h3 className="font-bold">CORE VORIX</h3>
+                <h3 className="font-bold">IA VORIX</h3>
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   <span className="text-[10px] text-green-500 font-bold uppercase tracking-widest">ONLINE</span>
