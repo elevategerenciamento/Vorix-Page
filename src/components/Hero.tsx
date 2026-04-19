@@ -19,7 +19,7 @@ const Hero = () => {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8"
         >
           <div className="w-2 h-2 rounded-full bg-vorix-orange animate-pulse" />
-          <span className="text-[10px] md:text-xs font-black tracking-[0.2em] uppercase text-white/80">SISTEMA DE GESTÃO INTELIGENTE</span>
+          <span className="text-[12px] md:text-xs font-black tracking-[0.2em] uppercase text-white/80">SISTEMA DE GESTÃO INTELIGENTE</span>
         </motion.div>
 
         <motion.h1
@@ -126,7 +126,7 @@ const Hero = () => {
                   {/* Left side / Intro - Hidden on very small mobile for speed */}
                   <div className="p-8 md:p-16 flex-1 border-b md:border-b-0 md:border-r border-white/5 space-y-6 md:space-y-10">
                      <div className="space-y-3">
-                       <span className="text-vorix-orange font-black text-[10px] md:text-sm uppercase tracking-[0.4em]">O DNA DO SISTEMA</span>
+                       <span className="text-vorix-orange font-black text-[12px] md:text-sm uppercase tracking-[0.4em]">O DNA DO SISTEMA</span>
                        <h2 className="text-3xl md:text-6xl font-black tracking-tighter leading-tight italic">
                           SIMPLES. <br className="hidden md:block"/>
                           PRECISO. <br className="hidden md:block"/>

@@ -23,7 +23,7 @@ const Stats = () => {
               className="text-center"
             >
               <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">{stat.value}</h3>
-              <p className="text-[10px] md:text-xs text-vorix-orange font-bold uppercase tracking-[0.2em]">{stat.label}</p>
+              <p className="text-[12px] md:text-xs text-vorix-orange font-bold uppercase tracking-[0.2em]">{stat.label}</p>
             </motion.div>
           ))}
         </div>

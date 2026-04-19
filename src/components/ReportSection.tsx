@@ -26,7 +26,7 @@ const ReportSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-vorix-orange/10 border border-vorix-orange/20 text-vorix-orange text-[10px] md:text-xs font-black uppercase tracking-[0.2em] mb-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-vorix-orange/10 border border-vorix-orange/20 text-vorix-orange text-[12px] md:text-sm font-black uppercase tracking-[0.2em] mb-8">
                 <FileText size={12} />
                 Inteligência Documentada
               </div>
@@ -113,11 +113,11 @@ const ReportSection = () => {
                 <div className="bg-[#050505] text-white p-5 md:p-8 flex justify-between items-start border-b border-white/10">
                   <div>
                     <div className="text-vorix-orange font-black text-2xl md:text-3xl tracking-tighter mb-1">VORIX</div>
-                    <div className="text-[7px] md:text-[9px] text-white/70 uppercase tracking-[0.3em] font-medium transition-all group-hover:tracking-[0.4em] duration-1000">Centro de Comando Financeiro</div>
+                    <div className="text-[10px] md:text-[12px] text-white/70 uppercase tracking-[0.3em] font-medium transition-all group-hover:tracking-[0.4em] duration-1000">Centro de Comando Financeiro</div>
                   </div>
                   <div className="text-right">
                     <div className="text-[9px] md:text-[11px] font-black uppercase tracking-widest mb-1.5">Relatório de Movimentações</div>
-                    <div className="text-[7px] md:text-[9px] text-white/70 font-medium">Gerado em: 18/04/2026, 12:32:25</div>
+                    <div className="text-[10px] md:text-[12px] text-white/70 font-medium">Gerado em: 18/04/2026, 12:32:25</div>
                   </div>
                 </div>
 
@@ -148,7 +148,7 @@ const ReportSection = () => {
 
                   {/* Net Result (Banner) */}
                   <div className="bg-[#050505] p-4.5 rounded-sm mb-8 flex justify-between items-center text-white px-6">
-                    <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.15em] text-white/90">Resultado Líquido do Período:</span>
+                    <span className="text-[11px] md:text-[13px] font-black uppercase tracking-[0.15em] text-white/90">Resultado Líquido do Período:</span>
                     <span className="text-xs md:text-base font-black text-vorix-orange">-R$ 849,00</span>
                   </div>
 
@@ -194,8 +194,8 @@ const ReportSection = () => {
 
                 {/* Report Footer */}
                 <div className="bg-white p-4 border-t border-gray-100 flex justify-between items-center px-8">
-                  <span className="text-[7px] text-black/40 font-bold uppercase tracking-widest">Página 1 de 1</span>
-                  <span className="text-[7px] text-black/40 font-bold uppercase tracking-widest">Vorix Financial Command Center</span>
+                  <span className="text-[10px] text-black/40 font-bold uppercase tracking-widest">Página 1 de 1</span>
+                  <span className="text-[10px] text-black/40 font-bold uppercase tracking-widest">Vorix Financial Command Center</span>
                 </div>
               </div>
 

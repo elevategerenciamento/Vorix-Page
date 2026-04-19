@@ -57,7 +57,7 @@ const DashboardPreview = () => {
                       </div>
                       <div>
                         <p className="font-bold text-sm">{t.title}</p>
-                        <p className="text-[10px] text-white/60 font-bold">{t.cat} • {t.date}</p>
+                        <p className="text-[12px] text-white/60 font-bold">{t.cat} • {t.date}</p>
                       </div>
                     </div>
                     <p className={`font-bold text-sm ${t.pos ? 'text-emerald-500' : 'text-red-500'}`}>{t.val}</p>
@@ -82,20 +82,20 @@ const DashboardPreview = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Notícias de Hoje</h3>
-                <p className="text-[10px] text-white/60">Atualiza diariamente com notícias reais</p>
+                <p className="text-[12px] text-white/60">Atualiza diariamente com notícias reais</p>
               </div>
             </div>
 
             <div className="space-y-4">
               <div className="bg-white/5 p-5 rounded-3xl border border-white/5">
-                <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full">BOLSA</span>
+                <span className="text-[12px] font-bold text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full">BOLSA</span>
                 <h4 className="font-bold mt-4 leading-snug">Bolsa bate recorde e encosta nos 200 mil pontos...</h4>
-                <p className="text-[10px] text-white/60 mt-2">Fonte: CNN Brasil</p>
+                <p className="text-[12px] text-white/60 mt-2">Fonte: CNN Brasil</p>
               </div>
               <div className="bg-white/5 p-5 rounded-3xl border border-white/5">
                 <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full">CÂMBIO</span>
                 <h4 className="font-bold mt-4 leading-snug">Dólar se mantém abaixo de R$ 5 com petróleo estável</h4>
-                <p className="text-[10px] text-white/60 mt-2">Fonte: GZH</p>
+                <p className="text-[12px] text-white/60 mt-2">Fonte: GZH</p>
               </div>
             </div>
 

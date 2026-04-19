@@ -81,7 +81,7 @@ const Features = () => {
                 <h3 className="text-sm md:text-2xl font-black mb-3 md:mb-6 tracking-tight leading-tight uppercase group-hover:text-white transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-white/70 text-[10px] md:text-lg leading-relaxed group-hover:text-white/90 transition-colors md:text-white/80">
+                <p className="text-white/70 text-[12px] md:text-lg leading-relaxed group-hover:text-white/90 transition-colors md:text-white/80">
                   {feature.desc}
                 </p>
              </div>
@@ -90,7 +90,7 @@ const Features = () => {
                 <div className="flex gap-1">
                    {[1,2,3].map(i => <div key={i} className={`w-0.5 h-0.5 md:w-1 md:h-1 rounded-full bg-gradient-to-r ${feature.color} opacity-20`} />)}
                 </div>
-                <div className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] text-white/10 group-hover:text-white/30 transition-colors">
+                <div className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] text-white/30 group-hover:text-white/50 transition-colors">
                    Engenharia
                 </div>
              </div>

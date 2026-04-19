@@ -33,7 +33,7 @@ const ProblemSection = () => {
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-vorix-orange font-black uppercase tracking-[0.4em] text-[10px] md:text-sm"
+            className="text-vorix-orange font-black uppercase tracking-[0.4em] text-[12px] md:text-sm"
           >
             O CUSTO DA GESTÃO TRADICIONAL
           </motion.span>
@@ -69,8 +69,8 @@ const ProblemSection = () => {
                 <div className="w-8 h-8 md:w-16 md:h-16 rounded-lg md:rounded-2xl bg-red-500/10 flex items-center justify-center mb-4 md:mb-10 group-hover:scale-110 transition-transform">
                   <div className="scale-75 md:scale-100">{prob.icon}</div>
                 </div>
-                <h3 className="text-xs md:text-2xl font-black mb-2 md:mb-4 tracking-tight leading-tight uppercase">{prob.title}</h3>
-                <p className="text-white/70 text-[9px] md:text-base leading-relaxed md:text-white/80">{prob.desc}</p>
+                <h3 className="text-sm md:text-2xl font-black mb-2 md:mb-4 tracking-tight leading-tight uppercase">{prob.title}</h3>
+                <p className="text-white/70 text-[11px] md:text-base leading-relaxed md:text-white/80">{prob.desc}</p>
               </div>
               
               {/* Corner Accent */}
